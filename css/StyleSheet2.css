@@ -1,0 +1,40 @@
+﻿.fvPagerStyle span {
+            font-size:18px;
+            color:#009aff;
+            border:solid;
+            border-color:#82bade;
+            border-width:1px;
+            padding-left:5px;
+            padding-right:5px;
+            margin-left:5px;
+            margin-right:5px;
+}
+
+.fvPagerStyle a {
+            color:#7c7878;
+            border:solid;
+            border-color:#7c7878;
+            border-width:1px;
+            padding-left:5px;
+            padding-right:5px;
+            margin-left:3px;
+            margin-right:3px;
+}
+
+.fontcolor{
+    color:#000000;
+    /*font-weight:bold;*/
+}
+
+
+.control-label {
+    color:#161616;
+}
+
+.table-bordered{
+    color:#000000;
+}
+
+.form-control{
+    color:#000000;
+}
