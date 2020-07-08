@@ -48,3 +48,23 @@ Error Number:8152,State:13,Class:16
    於 Admin_Employee_Employee_edit.save_Click() 於 d:\火箭\後台\Admin\Employee\Employee_edit.aspx.cs: 行 135
 ClientConnectionId:6b428bb0-6205-4621-9038-87b20f325fdf
 Error Number:8152,State:13,Class:16
+2020/7/6 下午 11:58:40        Employee_edit:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Admin_Employee_Employee_edit.Employee(String id) 於 d:\火箭\後台\Admin\Employee\Employee_edit.aspx.cs: 行 56
+2020/7/6 下午 11:59:21        Employee_edit:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Admin_Employee_Employee_edit.Employee(String id) 於 d:\火箭\後台\Admin\Employee\Employee_edit.aspx.cs: 行 56
+2020/7/6 下午 11:59:27        Employee_edit:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Admin_Employee_Employee_edit.Employee(String id) 於 d:\火箭\後台\Admin\Employee\Employee_edit.aspx.cs: 行 56
+2020/7/6 下午 11:59:44        Employee_edit:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Admin_Employee_Employee_edit.Employee(String id) 於 d:\火箭\後台\Admin\Employee\Employee_edit.aspx.cs: 行 56
+2020/7/6 下午 11:59:50        Employee_edit:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Admin_Employee_Employee_edit.Employee(String id) 於 d:\火箭\後台\Admin\Employee\Employee_edit.aspx.cs: 行 56

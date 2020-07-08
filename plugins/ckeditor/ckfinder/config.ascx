@@ -18,7 +18,7 @@
         // user logs on your system.
 
         //return false;
-        if (Session["empname"] == null)
+        if (Session["Username"] == null)
             return false;
         else
             return true;
@@ -35,7 +35,7 @@
         LicenseKey = "";
 
         // The base URL used to reach files in CKFinder through the browser.
-        BaseUrl = "~/sqimages/";
+        BaseUrl = "~/sqlimages/";
 
         // The phisical directory in the server where the file will end up. If
         // blank, CKFinder attempts to resolve BaseUrl.

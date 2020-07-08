@@ -39,7 +39,8 @@ public partial class Admin_Employee_Employee : System.Web.UI.Page
         try
         {
             string CmdString = @"";
-            CmdString = @"select * from Employee ";
+            CmdString = @"select * from Employee  
+                          left join [Group] on Group_value = Auth";
 
             SqlCommand cmd = new SqlCommand(CmdString, Conn);
 
@@ -64,10 +65,7 @@ public partial class Admin_Employee_Employee : System.Web.UI.Page
 
     protected void ins_Click(object sender, EventArgs e)
     {
-        Session["type"] = "ins";
-        Session["id"] = "";
-        Session["detailtype"] = false;
-        Response.Redirect("Employee_edit.aspx?type=owner");
+        Response.Redirect("Employee_edit.aspx?type=basic&action=ins");
     }
 
     protected void Del_Click(string Username)
@@ -109,8 +107,8 @@ public partial class Admin_Employee_Employee : System.Web.UI.Page
         {
             Session["type"] = "edit";
             int indexid = Convert.ToInt16(e.CommandArgument.ToString());
-            Session["id"] = Grid_Employee.Rows[indexid].Cells[1].Text;
-            Response.Redirect("Employee_edit.aspx?type=basic");
+            string id = Grid_Employee.Rows[indexid].Cells[1].Text;
+            Response.Redirect("Employee_edit.aspx?type=basic&action=edit&id=" + id);
         }
         if (e.CommandName == "Del")
         {
@@ -127,29 +125,7 @@ public partial class Admin_Employee_Employee : System.Web.UI.Page
     }
 
     protected void Grid_Employee_RowDataBound(object sender, GridViewRowEventArgs e)
-    {
-        int index = 0;
-        index = DB_fountion.tablenametoindex(Grid_Employee, e, "權限");
-
-        if (e.Row.RowType == DataControlRowType.DataRow)
-        {
-            switch (e.Row.Cells[index].Text)
-            {
-                case "1":
-                    e.Row.Cells[index].Text = "管理員";
-                    break;
-                case "2":
-                    e.Row.Cells[index].Text = "身份1";
-                    break;
-                case "3":
-                    e.Row.Cells[index].Text = "身份2";
-                    break;
-                case "&nbsp":
-                    break;
-                default:
-                    break;
-            }
-        }
+    { //改寫法 沒用到
     }
     #endregion
 

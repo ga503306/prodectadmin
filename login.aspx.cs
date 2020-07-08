@@ -30,6 +30,7 @@ public partial class login : System.Web.UI.Page
 
             //Session["ECOCOuserID"] = ECOCOuserID;
             Session["Username"] = UserData.Rows[0]["Username"].ToString();
+            Session["Auth"] = UserData.Rows[0]["Auth"].ToString();
             Session["Password"] = UserData.Rows[0]["Password"].ToString();
             Response.Redirect("Admin/Default/Default.aspx");
         }

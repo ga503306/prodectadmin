@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -7,36 +9,34 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
+
 public class DB_fountion
 {
-    public static DataTable SerialNumber(string sqkeyid, string dbtable, string no)//流水號 日期+三碼 sqkeyid,table名,no欄位名稱
+    public static DataTable GetNo(string nokey, string ap)
     {
+        //宣告SQL的連線
         SqlConnection Conn = new SqlConnection();
         Conn.ConnectionString = ConfigurationManager.ConnectionStrings["sqlString"].ConnectionString;
         DataTable dt = new DataTable();
         try
         {
             string CmdString = @"";
-            CmdString = @"Select RIGHT(REPLICATE('0', 8) + CAST(MAX(RIGHT(" + no + ",2))+1 as NVARCHAR), 3) as no from " + dbtable + " where substring(" + no + ",1,8)= '" + DateTime.Now.ToString("yyyyMMdd") + "'";
+            CmdString = @"select REPLICATE('0',7- Len(cast(isnull(max(substring(" + nokey + ",9,7)),0)+1 as varchar(7)) )) + cast(isnull(max(substring(" + nokey + ",9,7)),0)+1 as varchar(7)) as sno from [" + ap + "]";
             SqlCommand cmd = new SqlCommand(CmdString, Conn);
             Conn.Open();
-            SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection); //ExecureScalar
+            SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
             dt.Load(dr);
-            if (string.IsNullOrEmpty(dt.Rows[0]["no"].ToString()))
-            {
-                dt.Columns["no"].ReadOnly = false;
-                dt.Rows[0]["no"] = "001";
-            }
             return dt;
         }
         catch (Exception ex)
         {
-            DB_string.log("INSserial:", ex.ToString());
+            DB_string.log("GetNo:", ex.ToString());
             return null;
         }
         finally
@@ -109,4 +109,39 @@ public class DB_fountion
             return original;
         }
     }
+
+    public static string gridbind(string tablename, string keystring, string value)
+    {
+        string str_json = "";
+        SqlConnection Conn = new SqlConnection();
+        Conn.ConnectionString = ConfigurationManager.ConnectionStrings["sqlString"].ConnectionString;
+        Conn.Open();
+        DataTable dt = new DataTable();
+        try
+        {
+
+            string SelCmdString = @"";
+            SelCmdString = @"select value_string from Parameter where Table_name=@tablename and Key_string=@key_string and Value=@value ";
+            SqlCommand Selcmd = new SqlCommand(SelCmdString, Conn);
+            Selcmd.Parameters.AddWithValue("tablename", tablename);
+            Selcmd.Parameters.AddWithValue("key_string", keystring);
+            Selcmd.Parameters.AddWithValue("value", value);
+            Selcmd.ExecuteNonQuery();
+            SqlDataReader dr = Selcmd.ExecuteReader(CommandBehavior.CloseConnection);
+            dt.Load(dr);
+            str_json = dt.Rows[0]["value_string"].ToString();
+        }
+        catch (Exception ex)
+        {
+            DB_string.log("AuthInit:", ex.ToString());
+            str_json = "{\"Type\": \"失敗\"}";
+        }
+        finally
+        {
+            Conn.Close();
+        }
+
+        return str_json;
+    }
+
 }

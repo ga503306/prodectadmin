@@ -9,7 +9,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
 
-public partial class Admin_Employee_Employee : System.Web.UI.Page
+public partial class Admin_News_News : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -22,16 +22,15 @@ public partial class Admin_Employee_Employee : System.Web.UI.Page
             else
             {
 
-                DataTable dt = Employee();
-                ViewState["Data"] = dt;
-                Grid_Employee.DataSource = dt;
-                Grid_Employee.DataBind();
+                DataTable dt = News();
+                Grid_News.DataSource = dt;
+                Grid_News.DataBind();
             }
         }
     }
 
     #region Data
-    public static DataTable Employee()
+    public static DataTable News()
     {
         SqlConnection Conn = new SqlConnection();
         Conn.ConnectionString = ConfigurationManager.ConnectionStrings["sqlString"].ConnectionString;
@@ -39,7 +38,7 @@ public partial class Admin_Employee_Employee : System.Web.UI.Page
         try
         {
             string CmdString = @"";
-            CmdString = @"select * from Employee ";
+            CmdString = @"select * from News ";
 
             SqlCommand cmd = new SqlCommand(CmdString, Conn);
 
@@ -50,7 +49,7 @@ public partial class Admin_Employee_Employee : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            DB_string.log("Employee:", ex.ToString());
+            DB_string.log("News:", ex.ToString());
             return null;
         }
         finally
@@ -64,13 +63,10 @@ public partial class Admin_Employee_Employee : System.Web.UI.Page
 
     protected void ins_Click(object sender, EventArgs e)
     {
-        Session["type"] = "ins";
-        Session["id"] = "";
-        Session["detailtype"] = false;
-        Response.Redirect("Employee_edit.aspx?type=owner");
+        Response.Redirect("News_ins.aspx?type=news&action=ins");
     }
 
-    protected void Del_Click(string Username)
+    protected void Del_Click(string Newsno)
     {
         SqlConnection Conn = new SqlConnection();
         Conn.ConnectionString = ConfigurationManager.ConnectionStrings["sqlString"].ConnectionString;
@@ -78,21 +74,21 @@ public partial class Admin_Employee_Employee : System.Web.UI.Page
         try
         {
             string CmdString = @"";
-            CmdString = @"DELETE FROM Employee where Username=@Username ";
+            CmdString = @"DELETE FROM News where Newsno=@Newsno ";
             SqlCommand cmd = new SqlCommand(CmdString, Conn);
-            cmd.Parameters.AddWithValue("Username", Username);
+            cmd.Parameters.AddWithValue("Newsno", Newsno);
             Conn.Open();
             cmd.ExecuteNonQuery();
 
-            DataTable dt2 = Employee();
-            Grid_Employee.DataSource = dt2;
-            Grid_Employee.DataBind();
-
+            DataTable dt2 = News();
+            Grid_News.DataSource = dt2;
+            Grid_News.DataBind();
+            del_img(Newsno);
             ScriptManager.RegisterStartupScript(Page, GetType(), "alert", "<script>swal('刪除成功')</script>", false);
         }
         catch (Exception ex)
         {
-            DB_string.log("Employee_del:", ex.ToString());
+            DB_string.log("News_del:", ex.ToString());
             ScriptManager.RegisterStartupScript(Page, GetType(), "alert", "<script>swal('刪除失敗')</script>", false);
         }
         finally
@@ -103,54 +99,44 @@ public partial class Admin_Employee_Employee : System.Web.UI.Page
     #endregion
 
     #region Gridview
-    protected void Grid_Employee_RowCommand(object sender, GridViewCommandEventArgs e)
+    protected void Grid_News_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         if (e.CommandName == "Edit")
         {
             Session["type"] = "edit";
             int indexid = Convert.ToInt16(e.CommandArgument.ToString());
-            Session["id"] = Grid_Employee.Rows[indexid].Cells[1].Text;
-            Response.Redirect("Employee_edit.aspx?type=basic");
+            string id = Grid_News.Rows[indexid].Cells[1].Text;
+            Response.Redirect("News_edit.aspx?type=news&action=edit&id=" + id);
         }
         if (e.CommandName == "Del")
         {
             int indexid = Convert.ToInt16(e.CommandArgument.ToString());
-            string id = Grid_Employee.Rows[indexid].Cells[1].Text;
+            string id = Grid_News.Rows[indexid].Cells[1].Text;
             Del_Click(id);
+            del_img(id);
         }
     }
 
-    protected void Grid_Employee_PreRender(object sender, EventArgs e)
+    protected void Grid_News_PreRender(object sender, EventArgs e)
     {
-        Grid_Employee.UseAccessibleHeader = true;
-        Grid_Employee.HeaderRow.TableSection = TableRowSection.TableHeader;
+        Grid_News.UseAccessibleHeader = true;
+        Grid_News.HeaderRow.TableSection = TableRowSection.TableHeader;
     }
 
-    protected void Grid_Employee_RowDataBound(object sender, GridViewRowEventArgs e)
-    {
-        int index = 0;
-        index = DB_fountion.tablenametoindex(Grid_Employee, e, "權限");
-
-        if (e.Row.RowType == DataControlRowType.DataRow)
-        {
-            switch (e.Row.Cells[index].Text)
-            {
-                case "1":
-                    e.Row.Cells[index].Text = "管理員";
-                    break;
-                case "2":
-                    e.Row.Cells[index].Text = "身份1";
-                    break;
-                case "3":
-                    e.Row.Cells[index].Text = "身份2";
-                    break;
-                case "&nbsp":
-                    break;
-                default:
-                    break;
-            }
-        }
-    }
     #endregion
 
+    #region Other
+    protected void del_img(string Newsno)
+    {
+        try { 
+            //刪除
+            String DelPath = Server.MapPath("~/sqlimages/News/" + Newsno);
+            Directory.Delete(DelPath,true);
+        }
+        catch
+        {
+
+        }
+    } 
+    #endregion
 }

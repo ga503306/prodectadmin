@@ -8,7 +8,7 @@
         <h4 id="head_title" class="page-title">帳號</h4>
         <div class="clearfix"></div>
     </div>
-
+    <asp:HiddenField runat="server" ID="id"/>
     <div class="row">
         <div id="view" class="col-md-12 col-sm-9">
             <div class="white-box list2">

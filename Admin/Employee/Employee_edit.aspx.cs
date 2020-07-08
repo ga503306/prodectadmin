@@ -21,17 +21,18 @@ public partial class Admin_Employee_Employee_edit : System.Web.UI.Page
             }
             else
             {
-
-                if ((Session["id"] != null) && (Session["id"].ToString() != ""))
+                List();
+                if ((Request.QueryString["id"] != null) && (Request.QueryString["id"].ToString() != ""))
                 {
-                    Employee(Session["id"].ToString());
+                    id.Value = Request.QueryString["id"];
+                    Employee(id.Value);
                     del_btn.Visible = true;
                 }
                 else
                 {
                     del_btn.Visible = false;
                 }
-                List();
+               
             }
         }
     }
@@ -72,13 +73,13 @@ public partial class Admin_Employee_Employee_edit : System.Web.UI.Page
     {
         SqlConnection Conn = new SqlConnection();
         Conn.ConnectionString = ConfigurationManager.ConnectionStrings["sqlString"].ConnectionString;
-        SqlCommand cmdCheck = new SqlCommand(@"select value,value_string from Parameter where Table_name = 'EMployee' and Key_string = 'Auth' ", Conn);
+        SqlCommand cmdCheck = new SqlCommand(@"select Group_name,Group_value from [Group]", Conn);
         Conn.Open();
         SqlDataReader dr = cmdCheck.ExecuteReader();
         ((DropDownList)this.Master.FindControl("ContentPlaceHolder1").FindControl(("Auth"))).Items.Clear();
         while (dr.Read())
         {
-            ((DropDownList)this.Master.FindControl("ContentPlaceHolder1").FindControl(("Auth"))).Items.Add(new ListItem(dr[1].ToString(), dr[0].ToString()));
+            ((DropDownList)this.Master.FindControl("ContentPlaceHolder1").FindControl(("Auth"))).Items.Add(new ListItem(dr[0].ToString(), dr[1].ToString()));
         }
     }
     #endregion
@@ -105,13 +106,13 @@ public partial class Admin_Employee_Employee_edit : System.Web.UI.Page
         DataTable dt = new DataTable();
         try
         {
-            string state = Session["type"].ToString();
-            string id = "";
+            string state = Request.QueryString["action"];
+            //string id = "";
 
-            if ((Session["id"] != null) && (Session["id"].ToString() != ""))
-            {
-                id = Session["id"].ToString();
-            }
+            //if ((Session["id"] != null) && (Session["id"].ToString() != ""))
+            //{
+            //    id = Session["id"].ToString();
+            //}
 
             string CmdString = @"";
             if (state == "ins")
@@ -126,7 +127,7 @@ public partial class Admin_Employee_Employee_edit : System.Web.UI.Page
             }
 
             SqlCommand cmd = new SqlCommand(CmdString, Conn);
-            cmd.Parameters.AddWithValue("id", id);
+            cmd.Parameters.AddWithValue("id", id.Value);
             cmd.Parameters.AddWithValue("Username", Username.Value);
             string des_Password = DB_fountion.EncryptDES(Password.Value);//加密
             //cmd.Parameters.AddWithValue("Password", des_Password);
@@ -142,7 +143,7 @@ public partial class Admin_Employee_Employee_edit : System.Web.UI.Page
         finally
         {
             Conn.Close();
-            Response.Redirect("Employee.aspx?type=owner");
+            Response.Redirect("Employee.aspx?type=basic");
         }
     }
 
@@ -157,11 +158,10 @@ public partial class Admin_Employee_Employee_edit : System.Web.UI.Page
             string CmdString = @"";
             CmdString = @"delete from Employee where Username=@id ";
             SqlCommand cmd = new SqlCommand(CmdString, Conn);
-            cmd.Parameters.AddWithValue("id", Session["id"].ToString());
+            cmd.Parameters.AddWithValue("id", id.Value);
             Conn.Open();
             cmd.ExecuteNonQuery();
 
-            Response.Redirect("Employee.aspx?type=basic");
         }
         catch (Exception ex)
         {
@@ -171,6 +171,7 @@ public partial class Admin_Employee_Employee_edit : System.Web.UI.Page
         finally
         {
             Conn.Close();
+            Response.Redirect("Employee.aspx?type=basic");
         }
     } 
     #endregion

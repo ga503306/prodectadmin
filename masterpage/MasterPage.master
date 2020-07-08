@@ -51,7 +51,35 @@
             if (type != null) {
                 $("#" + type).addClass("nav-active");
             }
+            getAuth();
         });
+
+        //確認權限
+        function getAuth() {
+            $.ajax({
+                type: "POST",
+                url: "../../api/auth.aspx/getAuth",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                beforeSend: function () {
+                    loading(true);
+                },
+                complete: function () {
+                    loading(false);
+                },
+                success: function (data) {
+                    var arr = JSON.parse(data.d);
+                    if (arr.Type == "成功") {
+                        arr.detail.forEach(function (item, index, array) {
+                            $("#" + item.Group_view).css("display", "none");
+                        });
+                        //console.log(arr.detail);
+                    }
+                    else
+                        swal("失敗");
+                }
+            });
+        }
     </script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -81,17 +109,22 @@
                 <ul class="nav nav-pills nav-stacked custom-nav">
                     <li id="basic" class="menu-list"><a href="#"><i class="icon-basic"></i><span>基本資料管理</span></a>
                         <ul class="sub-menu-list">
-                            <li><a onclick="cookingClaer()" href="../../Admin/Employee/Employee.aspx?type=basic">人員設定</a></li>
+                            <li><a onclick="cookingClaer()" href="../../Admin/Employee/Employee.aspx?type=basic">權限設定</a></li>
                         </ul>
                     </li>
                     <li id="news" class="menu-list"><a href="#"><i class="icon-basic"></i><span>最新消息管理</span></a>
                         <ul class="sub-menu-list">
-                            <li><a onclick="cookingClaer()" href="../../Admin/Employee/Employee.aspx?type=basic">人員設定</a></li>
+                            <li><a onclick="cookingClaer()" href="../../Admin/News/News.aspx?type=news">最新消息</a></li>
                         </ul>
                     </li>
-                    <li id="dealers" class="menu-list"><a href="#"><i class="icon-basic"></i><span>最新消息管理</span></a>
+                    <li id="dealers" class="menu-list"><a href="#"><i class="icon-basic"></i><span>經銷商管理</span></a>
                         <ul class="sub-menu-list">
-                            <li><a onclick="cookingClaer()" href="../../Admin/Employee/Employee.aspx?type=basic">人員設定</a></li>
+                            <li><a onclick="cookingClaer()" href="../../Admin/Auth/Auth.aspx?type=dealers">群組設定</a></li>
+                        </ul>
+                    </li>
+                    <li id="auth" class="menu-list"><a href="#"><i class="icon-basic"></i><span>權限</span></a>
+                        <ul class="sub-menu-list">
+                            <li><a onclick="cookingClaer()" href="../../Admin/Auth/Auth.aspx?type=auth">群組設定</a></li>
                         </ul>
                     </li>
                     <li><a href="../../logout.aspx"><i class="icon-logout"></i><span>登出</span></a></li>

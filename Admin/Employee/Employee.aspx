@@ -39,7 +39,7 @@
                     <asp:BoundField DataField="Username" HeaderText="帳號"  HeaderStyle-Width="90px">
                         <HeaderStyle Width="90px" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="Auth" HeaderText="權限"  HeaderStyle-Width="90px">
+                    <asp:BoundField DataField="Group_name" HeaderText="權限"  HeaderStyle-Width="90px">
                         <HeaderStyle Width="90px" />
                     </asp:BoundField>
                     <asp:ButtonField ButtonType="Image" ImageUrl="~/images/icon/刪除紅.png" HeaderStyle-Width="18px" CommandName="Del">
