@@ -4,7 +4,7 @@
     <title>權限管理</title>
     <script>
         $(function () {
-            Init();
+
            
         });
 
@@ -81,7 +81,7 @@
                 <div class="col-lg-5 m-t-5 p-l-0 p-r-0">
                     <div class="col-lg-12">
                         <a class="btn btn-info" href="Auth.aspx?type=auth"><i class="ti-arrow-left"></i>&nbsp;<span>回列表</span>&nbsp;</a>
-                        <a class="btn btn-info" onclick="btn_Save()"><i class="ti-save"></i>&nbsp;<span>儲存</span>&nbsp;</a>
+                        <a class="btn btn-info" onclick="save()"><i class="ti-save"></i>&nbsp;<span>儲存</span>&nbsp;</a>
                         <a id="del_btn" class="btn btn-danger" onclick="data_del('')" runat="server"><i class="fa fa-times"></i>&nbsp;<span>刪除</span>&nbsp;</a>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                 <asp:HiddenField runat="server" ID="id" />
                 <div class="col-lg-12 m-t-5">
                     <div>
-                        <%--<asp:Button ID="save" runat="server" Text="Button" OnClick="save_Check" Style="display: none" />--%>
+                        <asp:Button ID="save" runat="server" Text="Button" OnClick="save_Check" Style="display: none" />
                         <%--<asp:Button ID="del" runat="server" Text="刪除" OnClick="del_Click" Style="display: none" />--%>
                     </div>
                     <div>
@@ -104,15 +104,19 @@
                 <div class="col-lg-12">
                     <asp:GridView ID="Grid_Auth" runat="server" class="table table-bordered" Width="100%" AutoGenerateColumns="False" EmptyDataText="尚無資料" ShowHeaderWhenEmpty="True" OnPreRender="Grid_Auth_PreRender" OnRowDataBound="Grid_Auth_RowDataBound" >
                         <Columns>
-                            <asp:TemplateField ShowHeader="False">
+                            <asp:TemplateField ShowHeader="True">
                                 <ItemTemplate>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="<%#Eval("value")%>" name="Grid_checkbox" /><label class="custom-control-label" for="<%#Eval("value")%>"></label>
+                                        <asp:CheckBox ID="Choose"  name="Grid_checkbox" runat="server" />
+                                        <%--<input type="checkbox" class="custom-control-input" id="<%#Eval("value")%>" name="Grid_checkbox" /><label class="custom-control-label" for="<%#Eval("value")%>"></label>--%>
                                     </div>
                                 </ItemTemplate>
-                                <ControlStyle Width="5px" />
-                                <HeaderStyle Width="5px" />
+                                <ControlStyle Width="15px" />
+                                <HeaderStyle Width="15px" />
                             </asp:TemplateField>
+                             <asp:BoundField DataField="value" HeaderText="隱藏頁面英" >
+                             
+                            </asp:BoundField>
                             <asp:BoundField DataField="value" HeaderText="隱藏頁面" >
                              
                             </asp:BoundField>

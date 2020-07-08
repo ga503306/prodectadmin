@@ -1,0 +1,5 @@
+2020/7/8 上午 11:06:27        Auth_edit:頁面:  錯誤訊息:System.InvalidOperationException: ExecuteNonQuery: CommandText 屬性尚未初始化
+   於 System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Auth_Auth_edit.save_Click() 於 d:\火箭\後台\Admin\Auth\Auth_edit.aspx.cs: 行 134
