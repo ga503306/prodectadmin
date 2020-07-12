@@ -9,7 +9,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
 
-public partial class Admin_News_News : System.Web.UI.Page
+
+public partial class Admin_Yachts_Yachts : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -22,15 +23,15 @@ public partial class Admin_News_News : System.Web.UI.Page
             else
             {
 
-                DataTable dt = News();
-                Grid_News.DataSource = dt;
-                Grid_News.DataBind();
+                DataTable dt = Yachts();
+                Grid_Yachts.DataSource = dt;
+                Grid_Yachts.DataBind();
             }
         }
     }
 
     #region Data
-    public static DataTable News()
+    public static DataTable Yachts()
     {
         SqlConnection Conn = new SqlConnection();
         Conn.ConnectionString = ConfigurationManager.ConnectionStrings["sqlString"].ConnectionString;
@@ -38,7 +39,7 @@ public partial class Admin_News_News : System.Web.UI.Page
         try
         {
             string CmdString = @"";
-            CmdString = @"select * from News ";
+            CmdString = @"select * from Yachts ";
 
             SqlCommand cmd = new SqlCommand(CmdString, Conn);
 
@@ -49,7 +50,7 @@ public partial class Admin_News_News : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            DB_string.log("News:", ex.ToString());
+            DB_string.log("Yachts:", ex.ToString());
             return null;
         }
         finally
@@ -63,10 +64,10 @@ public partial class Admin_News_News : System.Web.UI.Page
 
     protected void ins_Click(object sender, EventArgs e)
     {
-        Response.Redirect("News_ins.aspx?type=news&action=ins");
+        Response.Redirect("Yachts_ins.aspx?type=yachts");
     }
 
-    protected void Del_Click(string Newsno)
+    protected void Del_Click(string Yachtsno)
     {
         SqlConnection Conn = new SqlConnection();
         Conn.ConnectionString = ConfigurationManager.ConnectionStrings["sqlString"].ConnectionString;
@@ -74,22 +75,21 @@ public partial class Admin_News_News : System.Web.UI.Page
         try
         {
             string CmdString = @"";
-            CmdString = @"DELETE FROM News where Newsno=@Newsno ";
+            CmdString = @"DELETE FROM Yachts where Yachtsno=@Yachtsno ";
             SqlCommand cmd = new SqlCommand(CmdString, Conn);
-            cmd.Parameters.AddWithValue("Newsno", Newsno);
+            cmd.Parameters.AddWithValue("Yachtsno", Yachtsno);
             Conn.Open();
             cmd.ExecuteNonQuery();
 
-            DataTable dt2 = News();
-            Grid_News.DataSource = dt2;
-            Grid_News.DataBind();
-            del_img(Newsno);
+            DataTable dt2 = Yachts();
+            Grid_Yachts.DataSource = dt2;
+            Grid_Yachts.DataBind();
             ScriptManager.RegisterStartupScript(Page, GetType(), "alert", "<script>swal('刪除成功')</script>", false);
         }
         catch (Exception ex)
         {
-            DB_string.log("News_del:", ex.ToString());
-            ScriptManager.RegisterStartupScript(Page, GetType(), "alert", "<script>swal('刪除失敗')</script>", false);
+            DB_string.log("Yachts_del:", ex.ToString());
+            ScriptManager.RegisterStartupScript(Page, GetType(), "alert", "<script>swal('刪除失敗','國家尚未全刪除')</script>", false);
         }
         finally
         {
@@ -99,51 +99,32 @@ public partial class Admin_News_News : System.Web.UI.Page
     #endregion
 
     #region Gridview
-    protected void Grid_News_RowCommand(object sender, GridViewCommandEventArgs e)
+    protected void Grid_Yachts_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         if (e.CommandName == "Edit")
         {
-            Session["type"] = "edit";
             int indexid = Convert.ToInt16(e.CommandArgument.ToString());
-            string id = Grid_News.Rows[indexid].Cells[1].Text;
-            Response.Redirect("News_edit.aspx?type=news&action=edit&id=" + id);
+            string id = Grid_Yachts.Rows[indexid].Cells[1].Text;
+            Response.Redirect("Yachts_edit.aspx?type=yachts&id=" + id);
         }
         if (e.CommandName == "Del")
         {
             int indexid = Convert.ToInt16(e.CommandArgument.ToString());
-            string id = Grid_News.Rows[indexid].Cells[1].Text;
+            string id = Grid_Yachts.Rows[indexid].Cells[1].Text;
             Del_Click(id);
             del_img(id);
         }
     }
 
-    protected void Grid_News_PreRender(object sender, EventArgs e)
+    protected void Grid_Yachts_PreRender(object sender, EventArgs e)
     {
-        Grid_News.UseAccessibleHeader = true;
-        Grid_News.HeaderRow.TableSection = TableRowSection.TableHeader;
+        Grid_Yachts.UseAccessibleHeader = true;
+        Grid_Yachts.HeaderRow.TableSection = TableRowSection.TableHeader;
     }
-
-    #endregion
-
-    #region Other
-    protected void del_img(string Newsno)
-    {
-        try { 
-            //刪除
-            String DelPath = Server.MapPath("~/sqlimages/News/" + Newsno);
-            Directory.Delete(DelPath,true);
-        }
-        catch
-        {
-
-        }
-    }
-    #endregion
-
-    protected void Grid_News_RowDataBound(object sender, GridViewRowEventArgs e)
+    protected void Grid_Yachts_RowDataBound(object sender, GridViewRowEventArgs e)
     {
         int index = 0;
-        index = DB_fountion.tablenametoindex(Grid_News, e, "是否置頂");
+        index = DB_fountion.tablenametoindex(Grid_Yachts, e, "是否置頂");
 
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
@@ -160,6 +141,27 @@ public partial class Admin_News_News : System.Web.UI.Page
                 default:
                     break;
             }
+           
+          
         }
     }
+    #endregion
+
+    #region Other
+    protected void del_img(string id)
+    {
+        try
+        {
+            //刪除
+            String DelPath = Server.MapPath("~/sqlimages/Album/" + id);
+            Directory.Delete(DelPath, true);
+        }
+        catch
+        {
+
+        }
+    }
+    #endregion
+
+
 }

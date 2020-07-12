@@ -47,14 +47,13 @@ public partial class Admin_News_News_ins : System.Web.UI.Page
         SqlConnection Conn = new SqlConnection();
         Conn.ConnectionString = ConfigurationManager.ConnectionStrings["sqlString"].ConnectionString;
         Conn.Open();
-
         DataTable dt = new DataTable();
         try
         {
           
             string CmdString = @"";
-            CmdString = @"insert into News (Newsno,Title,Info,Context,Inday,Img) 
-                              values (@Newsno,@Title,@Info,@Context,@Inday,@Img)";
+            CmdString = @"insert into News (Newsno,Title,Info,Context,Inday,Img,Priority) 
+                              values (@Newsno,@Title,@Info,@Context,@Inday,@Img,@Priority)";
 
             DataTable serial = new DataTable();
             serial = DB_fountion.GetNo("Newsno", "News");
@@ -68,6 +67,7 @@ public partial class Admin_News_News_ins : System.Web.UI.Page
             cmd.Parameters.AddWithValue("Context", Context_.Value);
             cmd.Parameters.AddWithValue("Inday", Inday_.Value);
             cmd.Parameters.AddWithValue("Img", img_temp.Value);
+            cmd.Parameters.AddWithValue("Priority", Priority.SelectedValue);
 
             cmd.ExecuteNonQuery();
           

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage/MasterPage.master" validateRequest="False" AutoEventWireup="true" CodeFile="News_edit.aspx.cs" Inherits="Admin_News_News_edit" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage/MasterPage.master" ValidateRequest="False" AutoEventWireup="true" CodeFile="News_edit.aspx.cs" Inherits="Admin_News_News_edit" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <title>最新消息-編輯</title>
@@ -27,24 +27,24 @@
 
         function previewFileimg() {
             var preview = document.querySelector('#<%=img.ClientID %>');
-              var file = document.querySelector('#<%=FileUploadimg.ClientID %>').files[0];
-              var reader = new FileReader();
+            var file = document.querySelector('#<%=FileUploadimg.ClientID %>').files[0];
+            var reader = new FileReader();
 
-              reader.onloadend = function () {
-                  preview.src = reader.result;
-              }
+            reader.onloadend = function () {
+                preview.src = reader.result;
+            }
 
-              if (file) {
-                  reader.readAsDataURL(file);
-              }
-              else {
-                  preview.src = "";
-              }
-          }
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+            else {
+                preview.src = "";
+            }
+        }
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-        <div class="page-title-box">
+    <div class="page-title-box">
         <h4 id="head_title" class="page-title">最新消息-編輯</h4>
         <div class="clearfix"></div>
     </div>
@@ -73,7 +73,7 @@
                 </div>
 
                 <div class="clear"></div>
-                <asp:HiddenField id="id" runat="server"/>
+                <asp:HiddenField id="id" runat="server" />
                 <div class="col-lg-12 m-t-5">
                     <div class="col-lg-3 form-horizontal">
                         <div class="form-group">
@@ -87,7 +87,7 @@
                         <div class="form-group">
                             <label class="col-sm-4 control-label">標題:</label>
                             <div class="col-sm-8">
-                                <input class="form-control" id="Title_" type="text" runat="server" maxlength="30" />
+                                <input class="form-control" id="Title_" type="text" runat="server" maxlength="50" />
                             </div>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
                         <div class="form-group">
                             <label class="col-sm-4 control-label">簡介:</label>
                             <div class="col-sm-8">
-                                <input class="form-control" id="Info" type="text" runat="server" maxlength="30" />
+                                <input class="form-control" id="Info" type="text" runat="server" maxlength="100" />
                             </div>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                         <div class="form-group">
                             <label class="col-sm-4 control-label">顯示日期:</label>
                             <div class="col-sm-8">
-                                <input class="form-control" id="Inday_"  autocomplete="off" type="text" runat="server" maxlength="10" />
+                                <input class="form-control" id="Inday_" autocomplete="off" type="text" runat="server" maxlength="10" />
                             </div>
                         </div>
                     </div>
@@ -115,7 +115,18 @@
                             <div class="col-sm-8">
                                 <asp:FileUpload ID="FileUploadimg" runat="server" onchange="previewFileimg()" Style="margin-bottom: 10px; margin-top: 6px;" />
                                 <asp:ImageButton ID="img" runat="server" Enabled="false" ImageUrl="~/images/預設圖片.png" CssClass="img" />
-                                <asp:HiddenField ID="img_temp" runat="server"/>
+                                <asp:HiddenField ID="img_temp" runat="server" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">是否置頂:</label>
+                            <div class="col-sm-8">
+                                <asp:DropDownList class="form-control" ID="Priority" runat="server">
+                                <asp:ListItem Value="0" Text="否"></asp:ListItem>
+                                <asp:ListItem Value="1" Text="是"></asp:ListItem>
+                            </asp:DropDownList>
                             </div>
                         </div>
                     </div>

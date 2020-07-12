@@ -26,7 +26,13 @@
         });
 
         function previewFileimg() {
-            var preview = document.querySelector('#<%=img.ClientID %>');
+            var ext = getFileExtension3($("#ContentPlaceHolder1_FileUploadimg")[0].files[0].name);
+            if (ext != "jpg" && ext != "png" && ext != "jpeg" && ext != "gif") {
+                $("#ContentPlaceHolder1_FileUploadimg").val("");
+                swal('您的圖片格式不正確!');
+                return;
+            }
+              var preview = document.querySelector('#<%=img.ClientID %>');
               var file = document.querySelector('#<%=FileUploadimg.ClientID %>').files[0];
               var reader = new FileReader();
 
@@ -40,7 +46,10 @@
               else {
                   preview.src = "";
               }
-          }
+        }
+        function getFileExtension3(filename) { //副檔名
+            return filename.slice((filename.lastIndexOf(".") - 1 >>> 0) + 2);
+        }
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -85,7 +94,7 @@
                         <div class="form-group">
                             <label class="col-sm-4 control-label">標題:</label>
                             <div class="col-sm-8">
-                                <input class="form-control" id="Title_" type="text" runat="server" maxlength="30" />
+                                <input class="form-control" id="Title_" type="text" runat="server" maxlength="50" />
                             </div>
                         </div>
                     </div>
@@ -93,7 +102,7 @@
                         <div class="form-group">
                             <label class="col-sm-4 control-label">簡介:</label>
                             <div class="col-sm-8">
-                                <input class="form-control" id="Info" type="text" runat="server" maxlength="30" />
+                                <input class="form-control" id="Info" type="text" runat="server" maxlength="100" />
                             </div>
                         </div>
                     </div>
@@ -114,6 +123,17 @@
                                 <asp:FileUpload ID="FileUploadimg" runat="server" onchange="previewFileimg()" Style="margin-bottom: 10px; margin-top: 6px;" />
                                 <asp:ImageButton ID="img" runat="server" ImageUrl="~/images/預設圖片.png" CssClass="img" />
                                 <asp:HiddenField ID="img_temp" runat="server"/>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-lg-3 form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">是否置頂:</label>
+                            <div class="col-sm-8">
+                                <asp:DropDownList class="form-control" ID="Priority" runat="server">
+                                <asp:ListItem Value="0" Text="否"></asp:ListItem>
+                                <asp:ListItem Value="1" Text="是"></asp:ListItem>
+                            </asp:DropDownList>
                             </div>
                         </div>
                     </div>

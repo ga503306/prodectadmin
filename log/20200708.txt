@@ -3,3 +3,448 @@
    於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
    於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
    於 Admin_Auth_Auth_edit.save_Click() 於 d:\火箭\後台\Admin\Auth\Auth_edit.aspx.cs: 行 134
+2020/7/8 上午 11:39:33        News_edit:頁面:  錯誤訊息:System.Runtime.InteropServices.ExternalException (0x80004005): 在 GDI+ 中發生泛型錯誤。
+   於 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   於 System.Drawing.Image.Save(String filename, ImageFormat format)
+   於 System.Drawing.Image.Save(String filename)
+   於 DB_fountion.GenerateThumbnailImage(String name, Stream source, String target, String suffix, Int32 MaxWidth, Int32 MaxHight) 於 d:\火箭\後台\App_Code\DB_fountion.cs: 行 207
+   於 Admin_News_News_edit.Update_img(String Newsno) 於 d:\火箭\後台\Admin\News\News_edit.aspx.cs: 行 171
+   於 Admin_News_News_edit.save_Click() 於 d:\火箭\後台\Admin\News\News_edit.aspx.cs: 行 96
+2020/7/8 下午 03:22:58        Dealers_edit:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): 無效的資料行名稱 'cpno'。
+無效的資料行名稱 'cdno'。
+無效的資料行名稱 'cdname'。
+無效的資料行名稱 'description'。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   於 Admin_Dealers_Dealers_edit.Detail(String id) 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 77
+ClientConnectionId:21df79a8-9eee-4aa0-95b2-4b578eb51ab8
+Error Number:207,State:1,Class:16
+2020/7/8 下午 03:23:55        Dealers_edit:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): 無效的資料行名稱 'cpno'。
+無效的資料行名稱 'cdno'。
+無效的資料行名稱 'cdname'。
+無效的資料行名稱 'description'。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   於 Admin_Dealers_Dealers_edit.Detail(String id) 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 77
+ClientConnectionId:21df79a8-9eee-4aa0-95b2-4b578eb51ab8
+Error Number:207,State:1,Class:16
+2020/7/8 下午 03:24:02        Dealers_edit:頁面:  錯誤訊息:System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' 沒有包含名為 'cdnoC_no' 的屬性。
+   於 System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   於 System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   於 System.Web.UI.DataBinder.Eval(Object container, String expression)
+   於 System.Web.UI.TemplateControl.Eval(String expression)
+   於 ASP.admin_dealers_dealers_edit_aspx.__DataBinding__control23(Object sender, EventArgs e) 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx: 行 90
+   於 System.Web.UI.Control.OnDataBinding(EventArgs e)
+   於 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   於 System.Web.UI.Control.DataBind()
+   於 System.Web.UI.Control.DataBindChildren()
+   於 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   於 System.Web.UI.Control.DataBind()
+   於 System.Web.UI.Control.DataBindChildren()
+   於 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   於 System.Web.UI.Control.DataBind()
+   於 System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   於 System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   於 System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   於 System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   於 System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   於 System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   於 System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   於 System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   於 System.Web.UI.WebControls.GridView.DataBind()
+   於 Admin_Dealers_Dealers_edit.Detail(String id) 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 82
+2020/7/8 下午 03:24:17        Dealers_edit:頁面:  錯誤訊息:System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' 沒有包含名為 'cdnoC_no' 的屬性。
+   於 System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   於 System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   於 System.Web.UI.DataBinder.Eval(Object container, String expression)
+   於 System.Web.UI.TemplateControl.Eval(String expression)
+   於 ASP.admin_dealers_dealers_edit_aspx.__DataBinding__control23(Object sender, EventArgs e) 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx: 行 90
+   於 System.Web.UI.Control.OnDataBinding(EventArgs e)
+   於 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   於 System.Web.UI.Control.DataBind()
+   於 System.Web.UI.Control.DataBindChildren()
+   於 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   於 System.Web.UI.Control.DataBind()
+   於 System.Web.UI.Control.DataBindChildren()
+   於 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   於 System.Web.UI.Control.DataBind()
+   於 System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   於 System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   於 System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   於 System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   於 System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   於 System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   於 System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   於 System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   於 System.Web.UI.WebControls.GridView.DataBind()
+   於 Admin_Dealers_Dealers_edit.Detail(String id) 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 82
+2020/7/8 下午 03:24:48        Dealers_edit:頁面:  錯誤訊息:System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' 沒有包含名為 'Country' 的屬性。
+   於 System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   於 System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   於 System.Web.UI.DataBinder.Eval(Object container, String expression)
+   於 System.Web.UI.TemplateControl.Eval(String expression)
+   於 ASP.admin_dealers_dealers_edit_aspx.__DataBinding__control23(Object sender, EventArgs e) 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx: 行 90
+   於 System.Web.UI.Control.OnDataBinding(EventArgs e)
+   於 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   於 System.Web.UI.Control.DataBind()
+   於 System.Web.UI.Control.DataBindChildren()
+   於 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   於 System.Web.UI.Control.DataBind()
+   於 System.Web.UI.Control.DataBindChildren()
+   於 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   於 System.Web.UI.Control.DataBind()
+   於 System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   於 System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   於 System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   於 System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   於 System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   於 System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   於 System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   於 System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   於 System.Web.UI.WebControls.GridView.DataBind()
+   於 Admin_Dealers_Dealers_edit.Detail(String id) 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 82
+2020/7/8 下午 03:26:40        AuthDel:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): 參數化查詢 '(@Group_value nvarchar(4000))SELECT gd.G_no,gd.Group_name,gd.Gro' 必須有參數 '@Group_value'，但未提供。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 DB_data.getAuth() 於 d:\火箭\後台\App_Code\DB_data.cs: 行 141
+ClientConnectionId:33290e39-5430-46b2-bca1-15a0fe5cc3ec
+Error Number:8178,State:1,Class:16
+2020/7/8 下午 03:28:01        Dealers_edit:頁面:  錯誤訊息:System.ArgumentException: 物件型別 System.Web.UI.WebControls.HiddenField 與已知的管理提供者原始型別之間並無對應。
+   於 System.Data.SqlClient.MetaType.GetMetaTypeFromValue(Type dataType, Object value, Boolean inferLen, Boolean streamAllowed)
+   於 System.Data.SqlClient.SqlParameter.GetMetaTypeOnly()
+   於 System.Data.SqlClient.SqlParameter.Validate(Int32 index, Boolean isCommandProc)
+   於 System.Data.SqlClient.SqlCommand.BuildParamList(TdsParser parser, SqlParameterCollection parameters, Boolean includeReturnValue)
+   於 System.Data.SqlClient.SqlCommand.BuildExecuteSql(CommandBehavior behavior, String commandText, SqlParameterCollection parameters, _SqlRPC& rpc)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_edit.save_Click() 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 122
+2020/7/8 下午 03:29:14        Dealers_edit:頁面:  錯誤訊息:System.ArgumentException: 物件型別 System.Web.UI.WebControls.HiddenField 與已知的管理提供者原始型別之間並無對應。
+   於 System.Data.SqlClient.MetaType.GetMetaTypeFromValue(Type dataType, Object value, Boolean inferLen, Boolean streamAllowed)
+   於 System.Data.SqlClient.SqlParameter.GetMetaTypeOnly()
+   於 System.Data.SqlClient.SqlParameter.Validate(Int32 index, Boolean isCommandProc)
+   於 System.Data.SqlClient.SqlCommand.BuildParamList(TdsParser parser, SqlParameterCollection parameters, Boolean includeReturnValue)
+   於 System.Data.SqlClient.SqlCommand.BuildExecuteSql(CommandBehavior behavior, String commandText, SqlParameterCollection parameters, _SqlRPC& rpc)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_edit.save_Click() 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 122
+2020/7/8 下午 03:30:12        Dealers_del:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): DELETE 陳述式與 REFERENCE 條件約束 "FK_dealersC_dealersR" 衝突。衝突發生在資料庫 "project"，資料表 "dbo.DealersC", column 'R_no'。
+陳述式已經結束。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers.Del_Click(String R_no) 於 d:\火箭\後台\Admin\Dealers\Dealers.aspx.cs: 行 82
+ClientConnectionId:deaa3d9a-7fb0-4da8-a9e7-ddf1bcb92d1c
+Error Number:547,State:0,Class:16
+2020/7/8 下午 03:30:45        Dealers_del:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): DELETE 陳述式與 REFERENCE 條件約束 "FK_dealersC_dealersR" 衝突。衝突發生在資料庫 "project"，資料表 "dbo.DealersC", column 'R_no'。
+陳述式已經結束。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers.Del_Click(String R_no) 於 d:\火箭\後台\Admin\Dealers\Dealers.aspx.cs: 行 82
+ClientConnectionId:deaa3d9a-7fb0-4da8-a9e7-ddf1bcb92d1c
+Error Number:547,State:0,Class:16
+2020/7/8 下午 03:30:51        Dealers_edit:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): DELETE 陳述式與 REFERENCE 條件約束 "FK_dealersD_dealersC" 衝突。衝突發生在資料庫 "project"，資料表 "dbo.DealersD"。
+陳述式已經結束。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_edit.save_Click() 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 133
+ClientConnectionId:deaa3d9a-7fb0-4da8-a9e7-ddf1bcb92d1c
+Error Number:547,State:0,Class:16
+2020/7/8 下午 03:30:54        Dealers_del:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): DELETE 陳述式與 REFERENCE 條件約束 "FK_dealersC_dealersR" 衝突。衝突發生在資料庫 "project"，資料表 "dbo.DealersC", column 'R_no'。
+陳述式已經結束。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers.Del_Click(String R_no) 於 d:\火箭\後台\Admin\Dealers\Dealers.aspx.cs: 行 82
+ClientConnectionId:deaa3d9a-7fb0-4da8-a9e7-ddf1bcb92d1c
+Error Number:547,State:0,Class:16
+2020/7/8 下午 03:31:05        Dealers_del:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): DELETE 陳述式與 REFERENCE 條件約束 "FK_dealersC_dealersR" 衝突。衝突發生在資料庫 "project"，資料表 "dbo.DealersC", column 'R_no'。
+陳述式已經結束。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers.Del_Click(String R_no) 於 d:\火箭\後台\Admin\Dealers\Dealers.aspx.cs: 行 82
+ClientConnectionId:deaa3d9a-7fb0-4da8-a9e7-ddf1bcb92d1c
+Error Number:547,State:0,Class:16
+2020/7/8 下午 04:18:54        AuthDel:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): 參數化查詢 '(@Group_value nvarchar(4000))SELECT gd.G_no,gd.Group_name,gd.Gro' 必須有參數 '@Group_value'，但未提供。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 DB_data.getAuth() 於 d:\火箭\後台\App_Code\DB_data.cs: 行 141
+ClientConnectionId:f18cddaf-d784-41d9-a632-e9c0a5b8484d
+Error Number:8178,State:1,Class:16
+2020/7/8 下午 04:20:25        GetNo:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): 無效的資料行名稱 'G_no'。
+無效的資料行名稱 'G_no'。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   於 DB_fountion.GetNo(String nokey, String ap) 於 d:\火箭\後台\App_Code\DB_fountion.cs: 行 35
+ClientConnectionId:98300aa1-00e4-4ec6-b34c-a0691ce60ccf
+Error Number:207,State:1,Class:16
+2020/7/8 下午 04:20:40        Dealers_ins:頁面:  錯誤訊息:System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 Admin_Dealers_Dealers_ins.save_Click() 於 d:\火箭\後台\Admin\Dealers\Dealers_ins.aspx.cs: 行 86
+2020/7/8 下午 04:21:24        GetNo:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): 無效的資料行名稱 'G_no'。
+無效的資料行名稱 'G_no'。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   於 DB_fountion.GetNo(String nokey, String ap) 於 d:\火箭\後台\App_Code\DB_fountion.cs: 行 35
+ClientConnectionId:98300aa1-00e4-4ec6-b34c-a0691ce60ccf
+Error Number:207,State:1,Class:16
+2020/7/8 下午 04:21:26        Dealers_ins:頁面:  錯誤訊息:System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 Admin_Dealers_Dealers_ins.save_Click() 於 d:\火箭\後台\Admin\Dealers\Dealers_ins.aspx.cs: 行 86
+2020/7/8 下午 04:21:31        Dealers_ins:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): 無效的資料行名稱 'G_no'。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_ins.save_Click() 於 d:\火箭\後台\Admin\Dealers\Dealers_ins.aspx.cs: 行 93
+ClientConnectionId:f18cddaf-d784-41d9-a632-e9c0a5b8484d
+Error Number:207,State:1,Class:16
+2020/7/8 下午 04:21:58        Dealers_ins:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): 無效的資料行名稱 'G_no'。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_ins.save_Click() 於 d:\火箭\後台\Admin\Dealers\Dealers_ins.aspx.cs: 行 93
+ClientConnectionId:f18cddaf-d784-41d9-a632-e9c0a5b8484d
+Error Number:207,State:1,Class:16
+2020/7/8 下午 04:24:14        Dealers_ins:頁面:  錯誤訊息:System.ArgumentException: 資料行 'C_no' 不屬於資料表 Table1。
+   於 System.Data.DataRow.GetDataColumn(String columnName)
+   於 System.Data.DataRow.get_Item(String columnName)
+   於 Admin_Dealers_Dealers_ins.save_Click() 於 d:\火箭\後台\Admin\Dealers\Dealers_ins.aspx.cs: 行 113
+2020/7/8 下午 04:33:03        Dealers_edit:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): 當 IDENTITY_INSERT 設為 OFF 時，無法將外顯值插入資料表 'DealersC' 的識別欄位中。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_edit.save_Click() 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 144
+ClientConnectionId:2b657e35-bbe1-442a-8415-6ead4cddeba0
+Error Number:544,State:1,Class:16
+2020/7/8 下午 04:38:25        Dealers_del:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): DELETE 陳述式與 REFERENCE 條件約束 "FK_dealersC_dealersR" 衝突。衝突發生在資料庫 "project"，資料表 "dbo.DealersC", column 'R_no'。
+陳述式已經結束。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers.Del_Click(String R_no) 於 d:\火箭\後台\Admin\Dealers\Dealers.aspx.cs: 行 82
+ClientConnectionId:2b657e35-bbe1-442a-8415-6ead4cddeba0
+Error Number:547,State:0,Class:16
+2020/7/8 下午 04:53:06        Dealers_edit:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): 必須宣告純量變數 "@Country0"。
+必須宣告純量變數 "@Country1"。
+必須宣告純量變數 "@Country2"。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_edit.save_Click() 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 161
+ClientConnectionId:0d3b99ef-243a-4125-b88c-eb725d10c164
+Error Number:137,State:2,Class:15
+2020/7/8 下午 04:54:01        Dealers_edit:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): 必須宣告純量變數 "@Country0"。
+必須宣告純量變數 "@Country1"。
+必須宣告純量變數 "@Country2"。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_edit.save_Click() 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 161
+ClientConnectionId:0d3b99ef-243a-4125-b88c-eb725d10c164
+Error Number:137,State:2,Class:15
+2020/7/8 下午 04:54:55        Dealers_edit:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): 必須宣告純量變數 "@Country0"。
+必須宣告純量變數 "@Country1"。
+必須宣告純量變數 "@Country2"。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_edit.save_Click() 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 161
+ClientConnectionId:0d3b99ef-243a-4125-b88c-eb725d10c164
+Error Number:137,State:2,Class:15
+2020/7/8 下午 05:17:20        Dealers_del:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): DELETE 陳述式與 REFERENCE 條件約束 "FK_dealersC_dealersR" 衝突。衝突發生在資料庫 "project"，資料表 "dbo.DealersC", column 'R_no'。
+陳述式已經結束。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers.Del_Click(String R_no) 於 d:\火箭\後台\Admin\Dealers\Dealers.aspx.cs: 行 82
+ClientConnectionId:467e0c4f-25f9-4695-b1c4-ef52b0122ed8
+Error Number:547,State:0,Class:16
+2020/7/8 下午 05:17:25        Dealers_edit:頁面:  錯誤訊息:System.InvalidOperationException: ExecuteNonQuery: CommandText 屬性尚未初始化
+   於 System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_edit.save_Click() 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 163
+2020/7/8 下午 05:17:26        Dealers_del:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): DELETE 陳述式與 REFERENCE 條件約束 "FK_dealersC_dealersR" 衝突。衝突發生在資料庫 "project"，資料表 "dbo.DealersC", column 'R_no'。
+陳述式已經結束。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers.Del_Click(String R_no) 於 d:\火箭\後台\Admin\Dealers\Dealers.aspx.cs: 行 82
+ClientConnectionId:467e0c4f-25f9-4695-b1c4-ef52b0122ed8
+Error Number:547,State:0,Class:16
+2020/7/8 下午 05:17:32        Dealers_edit:頁面:  錯誤訊息:System.InvalidOperationException: ExecuteNonQuery: CommandText 屬性尚未初始化
+   於 System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_edit.save_Click() 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 163
+2020/7/8 下午 05:20:11        Dealers_edit:頁面:  錯誤訊息:System.InvalidOperationException: ExecuteNonQuery: CommandText 屬性尚未初始化
+   於 System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_edit.save_Click() 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 163
+2020/7/8 下午 05:46:10        Dealers_edit:頁面:  錯誤訊息:System.InvalidOperationException: ExecuteNonQuery: CommandText 屬性尚未初始化
+   於 System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_edit.save_Click() 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 163
+2020/7/8 下午 05:56:21        Dealers_edit:頁面:  錯誤訊息:System.InvalidOperationException: ExecuteNonQuery: CommandText 屬性尚未初始化
+   於 System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_edit.save_Click() 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 163
+2020/7/8 下午 06:00:57        Dealers_del:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): DELETE 陳述式與 REFERENCE 條件約束 "FK_dealersC_dealersR" 衝突。衝突發生在資料庫 "project"，資料表 "dbo.DealersC", column 'R_no'。
+陳述式已經結束。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers.Del_Click(String R_no) 於 d:\火箭\後台\Admin\Dealers\Dealers.aspx.cs: 行 82
+ClientConnectionId:2f147f24-89b6-4b32-8600-1b37fd5e20a2
+Error Number:547,State:0,Class:16

@@ -114,10 +114,10 @@
                                 <ControlStyle Width="15px" />
                                 <HeaderStyle Width="15px" />
                             </asp:TemplateField>
-                             <asp:BoundField DataField="value" HeaderText="隱藏頁面英" >
+                             <asp:BoundField DataField="T_id" HeaderText="隱藏頁面英" >
                              
                             </asp:BoundField>
-                            <asp:BoundField DataField="value" HeaderText="隱藏頁面" >
+                            <asp:BoundField DataField="T_name" HeaderText="隱藏頁面" >
                              
                             </asp:BoundField>
                         </Columns>

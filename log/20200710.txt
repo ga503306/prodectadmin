@@ -1,0 +1,54 @@
+2020/7/10 上午 10:54:10        Sel_sidebar:頁面:  錯誤訊息:System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' 沒有包含名為 'T_icon' 的屬性。
+   於 System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   於 System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   於 System.Web.UI.DataBinder.Eval(Object container, String expression)
+   於 System.Web.UI.TemplateControl.Eval(String expression)
+   於 ASP.masterpage_masterpage_master.__DataBind__control27(Object sender, EventArgs e) 於 d:\火箭\後台\masterpage\MasterPage.master: 行 130
+   於 System.Web.UI.Control.OnDataBinding(EventArgs e)
+   於 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   於 System.Web.UI.Control.DataBind()
+   於 System.Web.UI.Control.DataBindChildren()
+   於 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   於 System.Web.UI.Control.DataBind()
+   於 System.Web.UI.WebControls.Repeater.CreateItem(Int32 itemIndex, ListItemType itemType, Boolean dataBind, Object dataItem)
+   於 System.Web.UI.WebControls.Repeater.AddDataItemsIntoItemsArray(IEnumerable dataSource, Boolean useDataSource)
+   於 System.Web.UI.WebControls.Repeater.PostGetDataAction(IEnumerable dataSource)
+   於 System.Web.UI.WebControls.Repeater.CreateControlHierarchy(Boolean useDataSource)
+   於 System.Web.UI.WebControls.Repeater.OnDataBinding(EventArgs e)
+   於 System.Web.UI.WebControls.Repeater.DataBind()
+   於 masterpage_MasterPage.Sel_sidebar() 於 d:\火箭\後台\masterpage\MasterPage.master.cs: 行 52
+2020/7/10 下午 01:46:51        DBinit:頁面:  錯誤訊息:System.IO.DirectoryNotFoundException: 找不到路徑 'D:\火箭\後台\Admin\sqlimages\Album\202007100000001' 的一部分。
+   於 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   於 System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   於 System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   於 System.IO.DirectoryInfo.InternalGetFiles(String searchPattern, SearchOption searchOption)
+   於 System.IO.DirectoryInfo.GetFiles()
+   於 Admin_Album_Album_edit.DBinit() 於 d:\火箭\後台\Admin\Album\Album_edit.aspx.cs: 行 47
+2020/7/10 下午 01:47:04        DBinit:頁面:  錯誤訊息:System.IO.DirectoryNotFoundException: 找不到路徑 'D:\火箭\後台\Admin\sqlimages\Album\202007100000001' 的一部分。
+   於 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   於 System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   於 System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   於 System.IO.DirectoryInfo.InternalGetFiles(String searchPattern, SearchOption searchOption)
+   於 System.IO.DirectoryInfo.GetFiles()
+   於 Admin_Album_Album_edit.DBinit() 於 d:\火箭\後台\Admin\Album\Album_edit.aspx.cs: 行 47
+2020/7/10 下午 01:48:09        DBinit:頁面:  錯誤訊息:System.IO.DirectoryNotFoundException: 找不到路徑 'D:\火箭\後台\Admin\sqlimages\Album\202007100000001' 的一部分。
+   於 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   於 System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   於 System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   於 System.IO.DirectoryInfo.InternalGetFiles(String searchPattern, SearchOption searchOption)
+   於 System.IO.DirectoryInfo.GetFiles()
+   於 Admin_Album_Album_edit.DBinit() 於 d:\火箭\後台\Admin\Album\Album_edit.aspx.cs: 行 47
+2020/7/10 下午 01:55:09        DBinit:頁面:  錯誤訊息:System.IO.DirectoryNotFoundException: 找不到路徑 'D:\火箭\後台\sqlimages\Album\202007100000002' 的一部分。
+   於 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   於 System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   於 System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   於 System.IO.DirectoryInfo.InternalGetFiles(String searchPattern, SearchOption searchOption)
+   於 System.IO.DirectoryInfo.GetFiles()
+   於 Admin_Album_Album_edit.DBinit() 於 d:\火箭\後台\Admin\Album\Album_edit.aspx.cs: 行 47
+2020/7/10 下午 01:56:49        DBinit:頁面:  錯誤訊息:System.IO.DirectoryNotFoundException: 找不到路徑 'D:\火箭\後台\sqlimages\Album\202007100000002' 的一部分。
+   於 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   於 System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   於 System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   於 System.IO.DirectoryInfo.InternalGetFiles(String searchPattern, SearchOption searchOption)
+   於 System.IO.DirectoryInfo.GetFiles()
+   於 Admin_Album_Album_edit.DBinit() 於 d:\火箭\後台\Admin\Album\Album_edit.aspx.cs: 行 47

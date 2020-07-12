@@ -63,7 +63,8 @@ public partial class Admin_Auth_Auth : System.Web.UI.Page
 
     protected void ins_Click(object sender, EventArgs e)
     {
-        Group_name.Value = "";//清
+        //Group_name.Value = "";//清
+        ScriptManager.RegisterStartupScript(Page, Page.GetType(), "clear", "$('#ContentPlaceHolder1_Group_name').val('');", true);//清
         ScriptManager.RegisterStartupScript(Page, Page.GetType(), "openpup", "$('#modal-ins').modal('show');", true);
         // Response.Redirect("Auth_edit.aspx?type=basic&action=ins");
     }
@@ -112,7 +113,7 @@ public partial class Admin_Auth_Auth : System.Web.UI.Page
         {
             string InsCmdString = @"";
             InsCmdString = @"INSERT INTO [Group]( G_no, Group_name, Group_value )
-                             SELECT  @G_no,@Group_name,max(Group_value)+1 FROM [Group]";
+                             SELECT  @G_no,@Group_name,isnull(max(Group_value),0)+1 FROM [Group]";
 
             SqlCommand Inscmd = new SqlCommand(InsCmdString, Conn, tran);
             Inscmd.Parameters.AddWithValue("G_no", DateTime.Now.ToString("yyyyMMdd") + serial.Rows[0]["sno"].ToString());

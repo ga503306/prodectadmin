@@ -52,6 +52,7 @@ public partial class Admin_News_News_edit : System.Web.UI.Page
             Info.Value = dt.Rows[0]["Info"].ToString();
             Context_.Value = dt.Rows[0]["Context"].ToString();
             Inday_.Value = Convert.ToDateTime(dt.Rows[0]["Inday"]).ToString("yyyy-MM-dd");
+            Priority.SelectedValue = dt.Rows[0]["Priority"].ToString();
             //圖
             if (!string.IsNullOrEmpty(dt.Rows[0]["Img"].ToString())) 
             {
@@ -98,7 +99,7 @@ public partial class Admin_News_News_edit : System.Web.UI.Page
             string CmdString = @"";
 
                 CmdString = @"update News set 
-                              Title=@Title,Info=@Info,Context=@Context,Inday=@Inday,Img=@Img
+                              Title=@Title,Info=@Info,Context=@Context,Inday=@Inday,Img=@Img,Priority=@Priority
                               where Newsno=@id";
 
 
@@ -109,6 +110,7 @@ public partial class Admin_News_News_edit : System.Web.UI.Page
             cmd.Parameters.AddWithValue("Context", Context_.Value);
             cmd.Parameters.AddWithValue("Inday", Inday_.Value);
             cmd.Parameters.AddWithValue("Img", img_temp.Value);
+            cmd.Parameters.AddWithValue("Priority", Priority.SelectedValue);
             cmd.ExecuteNonQuery();
 
         }
@@ -165,9 +167,11 @@ public partial class Admin_News_News_edit : System.Web.UI.Page
             String filename = "Img" + ext;
             String SavePath = "";
             img_temp.Value = filename;//存回資料庫
-            SavePath = Server.MapPath("~/sqlimages/News/" + Newsno + "/" + filename);
+            //SavePath = Server.MapPath("~/sqlimages/News/" + Newsno + "/" + filename);
+            SavePath = Server.MapPath("~/sqlimages/News/" + Newsno );
             img.ImageUrl = "~/sqimages/News/" + Newsno + "/" + filename;
-            FileUploadimg.SaveAs(SavePath);
+            DB_fountion.GenerateThumbnailImage(filename, FileUploadimg.FileContent, SavePath, "", 800, 600);
+            //FileUploadimg.SaveAs(SavePath);
         }
     }
 

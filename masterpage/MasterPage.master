@@ -51,7 +51,7 @@
             if (type != null) {
                 $("#" + type).addClass("nav-active");
             }
-            getAuth();
+            //getAuth();
         });
 
         //確認權限
@@ -80,6 +80,24 @@
                 }
             });
         }
+        function Del_check(btn) {
+            event.preventDefault();
+            swal({
+                title: "確認删除!?",
+                showCancelButton: true,
+                confirmButtonColor: "#dd3333",
+                confirmButtonText: "删除",
+                cancelButtonText: "取消"
+            },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        $(btn).click();
+                        return true;
+                    } else {
+                        return false;
+                    }
+                });
+        }
     </script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -107,7 +125,21 @@
             <div class="left-side-inner">
                 <!--Sidebar nav-->
                 <ul class="nav nav-pills nav-stacked custom-nav">
-                    <li id="basic" class="menu-list"><a href="#"><i class="icon-basic"></i><span>基本資料管理</span></a>
+                    <asp:Repeater ID="Rpt_sidebar" runat="server" OnItemDataBound="Rpt_sidebar_ItemDataBound">
+                        <ItemTemplate>
+                            <li id="<%# Eval("T_id") %>" class="menu-list"><a href="#"><i class="<%# Eval("T_icon") %>"></i><span><%# Eval("T_name") %></span></a>
+                                <asp:Repeater ID="Rpt_sidebar_detail" runat="server">
+                                    <ItemTemplate>
+                                        <ul class="sub-menu-list">
+                                            <li><a onclick="cookingClaer()" href="<%# Eval("Url") %>"><%# Eval("Td_name") %></a></li>
+                                        </ul>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                            </li>
+                        </ItemTemplate>
+                    </asp:Repeater>
+
+                 <%--   <li id="basic" class="menu-list"><a href="#"><i class="icon-basic"></i><span>基本資料管理</span></a>
                         <ul class="sub-menu-list">
                             <li><a onclick="cookingClaer()" href="../../Admin/Employee/Employee.aspx?type=basic">權限設定</a></li>
                         </ul>
@@ -119,14 +151,15 @@
                     </li>
                     <li id="dealers" class="menu-list"><a href="#"><i class="icon-basic"></i><span>經銷商管理</span></a>
                         <ul class="sub-menu-list">
-                            <li><a onclick="cookingClaer()" href="../../Admin/Auth/Auth.aspx?type=dealers">群組設定</a></li>
+                            <li><a onclick="cookingClaer()" href="../../Admin/Dealers/Dealers.aspx?type=dealers">國家別,地區管理</a></li>
+                            <li><a onclick="cookingClaer()" href="../../Admin/DealersDetail/DealersDetail.aspx?type=dealers">經銷商</a></li>
                         </ul>
                     </li>
                     <li id="auth" class="menu-list"><a href="#"><i class="icon-basic"></i><span>權限</span></a>
                         <ul class="sub-menu-list">
                             <li><a onclick="cookingClaer()" href="../../Admin/Auth/Auth.aspx?type=auth">群組設定</a></li>
                         </ul>
-                    </li>
+                    </li>--%>
                     <li><a href="../../logout.aspx"><i class="icon-logout"></i><span>登出</span></a></li>
                 </ul>
                 <!--End sidebar nav-->

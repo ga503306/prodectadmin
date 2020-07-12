@@ -51,7 +51,7 @@ public partial class Admin_Auth_Auth_edit : System.Web.UI.Page
         try
         {
             string CmdString = @"";
-            CmdString = @"select * from [Parameter] where Table_name = 'Parameter' and Key_string = 'SidebarID' ";
+            CmdString = @"select * from [Table]  ";
 
             SqlCommand cmd = new SqlCommand(CmdString, Conn);
 
@@ -142,13 +142,13 @@ public partial class Admin_Auth_Auth_edit : System.Web.UI.Page
     }
     protected void Grid_Auth_RowDataBound(object sender, GridViewRowEventArgs e)
     {
-        int index = 0;
-        index = DB_fountion.tablenametoindex(Grid_Auth, e, "隱藏頁面");
+        //int index = 0;
+        //index = DB_fountion.tablenametoindex(Grid_Auth, e, "隱藏頁面");
 
-        if (e.Row.RowType == DataControlRowType.DataRow)
-        {
-            e.Row.Cells[index].Text = DB_fountion.gridbind("Parameter", "SidebarID", e.Row.Cells[index].Text);
-        }
+        //if (e.Row.RowType == DataControlRowType.DataRow)
+        //{
+        //    e.Row.Cells[index].Text = DB_fountion.gridbind("Parameter", "SidebarID", e.Row.Cells[index].Text);
+        //}
     }
     #endregion
 

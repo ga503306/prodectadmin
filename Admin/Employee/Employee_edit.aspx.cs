@@ -129,7 +129,7 @@ public partial class Admin_Employee_Employee_edit : System.Web.UI.Page
             SqlCommand cmd = new SqlCommand(CmdString, Conn);
             cmd.Parameters.AddWithValue("id", id.Value);
             cmd.Parameters.AddWithValue("Username", Username.Value);
-            string des_Password = DB_fountion.EncryptDES(Password.Value);//加密
+            //string des_Password = DB_fountion.EncryptDES(Password.Value);//加密
             //cmd.Parameters.AddWithValue("Password", des_Password);
             cmd.Parameters.AddWithValue("Auth", Auth.SelectedValue);
 
@@ -175,4 +175,5 @@ public partial class Admin_Employee_Employee_edit : System.Web.UI.Page
         }
     } 
     #endregion
+
 }
