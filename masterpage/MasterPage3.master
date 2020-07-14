@@ -11,18 +11,18 @@
 
     <title></title>
 
-    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <link href="../plugins/sweetalert/sweetalert.css" rel="stylesheet" />
-    <link href="../Css/style_ship.css" rel="stylesheet" type="text/css" />
-    <link href="../Css/reset.css" rel="stylesheet" type="text/css" />
-    <link href="../Css/homestyle.css" rel="stylesheet" type="text/css" />
+    <link href="../css/style_ship.css" rel="stylesheet" type="text/css" />
+    <link href="../css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="../css/homestyle.css" rel="stylesheet" type="text/css" />
 
-    <script src="Scripts/jquery-3.3.1.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-    <script src="plugins/sweetalert/sweetalert-dev.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../plugins/sweetalert/sweetalert-dev.js"></script>
 
     <style></style>
-    <asp:ContentPlaceHolder id="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
@@ -31,18 +31,35 @@
             <div class="sub">
                 <p><a href="Default.aspx">Home</a></p>
             </div>
-            <div id="logol"><a href="Default.aspx"><img src="images/logo001.gif" alt="Tayana" /></a></div>
+            <div id="logol">
+                <a href="Default.aspx">
+                    <img src="images/logo001.gif" alt="Tayana" /></a>
+            </div>
             <!--------------------------------選單開始---------------------------------------------------->
             <div class="menu">
                 <ul>
-                    <li class="menuli01"><a href="#">Yachts</a></li>
-                    <li class="menuli02"><a href="#">NEWS</a></li>
-                    <li class="menuli03"><a href="#">COMPANY</a></li>
-                    <li class="menuli04"><a href="#">DEALERS</a></li>
-                    <li class="menuli05"><a href="#">CONTACT</a></li>
+                    <li class="menuli01"><a href="Yachts.aspx">Yachts</a></li>
+                    <li class="menuli02"><a href="News.aspx">NEWS</a></li>
+                    <li class="menuli03"><a href="Company.aspx">COMPANY</a></li>
+                    <li class="menuli04"><a href="Dealers.aspx">DEALERS</a></li>
+                    <li class="menuli05"><a href="Contact.aspx">CONTACT</a></li>
                 </ul>
             </div>
             <!--------------------------------選單開始結束---------------------------------------------------->
+            <!--遮罩-->
+            <div class="bannermasks">
+                <img src="images/banner02_masks.png" alt="&quot;&quot;" />
+            </div>
+            <!--遮罩結束-->
+            <!--------------------------------換圖開始---------------------------------------------------->
+            <div class="banner">
+                <ul>
+                    <li>
+                        <img src="images/newbanner.jpg" alt="Tayana Yachts" /></li>
+                </ul>
+            </div>
+            <!--------------------------------換圖結束---------------------------------------------------->
+
             <div class="conbg">
                 <!--------------------------------左邊選單開始---------------------------------------------------->
                 <div class="left">
@@ -50,7 +67,7 @@
                     <div class="left1">
                         <p><span>NEWS</span></p>
                         <ul>
-                            <li><a href="#">News & Events</a></li>
+                            <li><a href="News.aspx">News & Events</a></li>
                         </ul>
                     </div>
                 </div>

@@ -44,7 +44,7 @@
                     <asp:BoundField DataField="Modal_n" HeaderText="遊艇型號" HeaderStyle-Width="90px">
                         <HeaderStyle Width="90px" />
                     </asp:BoundField>
-                     <asp:BoundField DataField="Isnew" HeaderText="是否置頂" HeaderStyle-Width="90px">
+                     <asp:BoundField DataField="Isnew" HeaderText="是否最新" HeaderStyle-Width="90px">
                         <HeaderStyle Width="90px" />
                     </asp:BoundField>
                     <asp:ButtonField ButtonType="Image" ImageUrl="~/images/icon/刪除紅.png" HeaderStyle-Width="18px" CommandName="Del">

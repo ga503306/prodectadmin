@@ -26,6 +26,12 @@
         });
 
         function previewFileimg() {
+            var ext = getFileExtension3($("#ContentPlaceHolder1_FileUploadimg")[0].files[0].name);
+            if (ext != "jpg" && ext != "png" && ext != "jpeg" && ext != "gif") {
+                $("#ContentPlaceHolder1_FileUploadimg").val("");
+                swal('您的圖片格式不正確!');
+                return;
+            }
             var preview = document.querySelector('#<%=img.ClientID %>');
             var file = document.querySelector('#<%=FileUploadimg.ClientID %>').files[0];
             var reader = new FileReader();
@@ -40,6 +46,9 @@
             else {
                 preview.src = "";
             }
+        }
+        function getFileExtension3(filename) { //副檔名
+            return filename.slice((filename.lastIndexOf(".") - 1 >>> 0) + 2);
         }
     </script>
 </asp:Content>

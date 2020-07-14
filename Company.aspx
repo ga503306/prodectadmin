@@ -23,8 +23,8 @@
             <div class="left1">
                 <p><span>COMPANY </span></p>
                 <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Certificat</a></li>
+                    <li><a href="Company.aspx">About Us</a></li>
+                    <li><a href="Company1.aspx">Certificat</a></li>
                 </ul>
             </div>
         </div>

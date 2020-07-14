@@ -1,6 +1,20 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage/masterpage3.master" AutoEventWireup="true" CodeFile="News.aspx.cs" Inherits="News" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <style>
+        .img {
+            max-height: 161px;
+            max-width: 187px;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+        }
+    </style>
+    <script>
+        function get_url(id) {
+            document.location.href = "News_view.aspx?id=" + id;
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div id="crumb"><a href="#">Home</a> >> <a href="#">News </a>>> <a href="#"><span class="on1">News & Events</span></a></div>
@@ -18,24 +32,22 @@
                                         <li>
                                             <div>
                                                 <p>
-                                                <asp:ImageButton ID="Img3d" runat="server" CausesValidation="false" CommandName="Pic"
-                                                 ImageUrl='<%# string.IsNullOrEmpty(Eval("Img").ToString()) ? "images/noimage.png" : "../後台/sqlimages/News/" + Eval("Newsno") + "/" + Eval("Img")+ "?" + DateTime.Now.ToString("yyyyMMddHHmmss") %>' />
-                                                    <img src='<%# string.IsNullOrEmpty(Eval("Img").ToString()) ? "images/noimage.png" : "../sqlimages/News/" + Eval("Newsno")+ "/" + Eval("Img") + "?" + DateTime.Now.ToString("yyyyMMddHHmmss")%>' alt="&quot;&quot;" />
+                                                    <img class="img" src='<%# string.IsNullOrEmpty(Eval("Img").ToString()) ? "images/noimage.png" : "/sqlimages/News/" + Eval("Newsno")+ "/" + Eval("Img") + "?" + DateTime.Now.ToString("yyyyMMddHHmmss")%>' alt="&quot;&quot;" />
                                                 </p>
                                             </div>
                                         </li>
                                         <li>
                                             <span><%# String.Format("{0:yyyy/MM/dd}",Eval("Inday"))  %></span><br />
-                                            <%# Eval("Title") %>
+                                            <a onclick='get_url(<%# Eval("Newsno") %>);' href="#"><%# Eval("Title") %></a></td>
                                         </li>
                                         <br>
-                                        <li> <%# Eval("Info") %></li>
+                                        <li><%# Eval("Info") %></li>
                                     </ul>
                                 </div>
                             </li>
                         </ItemTemplate>
                     </asp:Repeater>
-<%--                    <li>
+                    <%--                    <li>
                         <div class="list01">
                             <ul>
                                 <li>
@@ -53,7 +65,6 @@
                             </ul>
                         </div>
                     </li>--%>
-
                 </ul>
 
                 <div class="pagenumber">| <span>1</span> | <a href="#">2</a> | <a href="#">3</a> | <a href="#">4</a> | <a href="#">5</a> |  <a href="#">Next</a>  <a href="#">LastPage</a></div>

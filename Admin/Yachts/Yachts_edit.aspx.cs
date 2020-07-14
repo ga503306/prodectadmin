@@ -54,7 +54,13 @@ public partial class Admin_Yachts_Yachts_edit : System.Web.UI.Page
             Layout.Value = dt.Rows[0]["Layout"].ToString();
             Specification.Value = dt.Rows[0]["Specification"].ToString();
             Isnew.SelectedValue = dt.Rows[0]["Isnew"].ToString();
-
+            //圖
+            if (!string.IsNullOrEmpty(dt.Rows[0]["Img"].ToString()))
+            {
+                Random rand = new Random();
+                img.ImageUrl = "~/sqlimages/Yachts/" + dt.Rows[0]["Yachtsno"].ToString() + "/" + dt.Rows[0]["Img"].ToString() + "?" + rand.Next(1000).ToString();
+                img_temp.Value = dt.Rows[0]["Img"].ToString();
+            }
         }
         catch (Exception ex)
         {
@@ -91,9 +97,10 @@ public partial class Admin_Yachts_Yachts_edit : System.Web.UI.Page
 
         try
         {
+            Update_img(id.Value);//新增圖片
             string CmdString = @"";
 
-            CmdString = @"update Yachts set Modal=@Modal, Modal_n=@Modal_n, Overview=@Overview, Layout=@Layout, Specification=@Specification, Isnew=@Isnew
+            CmdString = @"update Yachts set Modal=@Modal, Modal_n=@Modal_n, Overview=@Overview, Layout=@Layout, Specification=@Specification, Img=@Img, Isnew=@Isnew
                           where Yachtsno=@Yachtsno";
 
             SqlCommand cmd = new SqlCommand(CmdString, Conn, tran);
@@ -103,6 +110,7 @@ public partial class Admin_Yachts_Yachts_edit : System.Web.UI.Page
             cmd.Parameters.AddWithValue("Overview", Overview.Value);
             cmd.Parameters.AddWithValue("Layout", Layout.Value);
             cmd.Parameters.AddWithValue("Specification", Specification.Value);
+            cmd.Parameters.AddWithValue("Img", img_temp.Value);
             cmd.Parameters.AddWithValue("Isnew", Isnew.SelectedValue);
             cmd.ExecuteNonQuery();
 
@@ -153,12 +161,36 @@ public partial class Admin_Yachts_Yachts_edit : System.Web.UI.Page
     #endregion
 
     #region Other
+    protected void Update_img(string Yachtsno)
+    {
+        if (FileUploadimg.HasFile)
+        {
+            if (!Directory.Exists(HttpContext.Current.Server.MapPath("~") + @"/sqlimages/Yachts/" + Yachtsno))
+                Directory.CreateDirectory(HttpContext.Current.Server.MapPath("~") + @"/sqlimages/Yachts/" + Yachtsno);
+
+            FileUpload test = FileUploadimg;
+            string ext = System.IO.Path.GetExtension(test.FileName);
+            String filename = "Img" + ext;
+            String SavePath = "";
+            String SavePath_min = "";
+            img_temp.Value = filename;//存回資料庫
+            SavePath = Server.MapPath("~/sqlimages/Yachts/" + Yachtsno + "/" + filename);
+            SavePath_min = Server.MapPath("~/sqlimages/Yachts/" + Yachtsno);
+            img.ImageUrl = "~/sqimages/Yachts/" + Yachtsno + "/" + filename;
+            DB_fountion.GenerateThumbnailImage(filename, FileUploadimg.FileContent, SavePath_min, "min_", 800, 600);
+            FileUploadimg.SaveAs(SavePath);
+        }
+    }
+
     protected void del_img(string id)
     {
         try
         {
             //刪除
             String DelPath = Server.MapPath("~/sqlimages/Album/" + id);
+            Directory.Delete(DelPath, true);
+            //刪除
+            DelPath = Server.MapPath("~/sqlimages/Yachts/" + id);
             Directory.Delete(DelPath, true);
         }
         catch

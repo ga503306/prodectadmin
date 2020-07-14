@@ -270,7 +270,7 @@ body {
 /*換圖*/
 .banner {
 	float: left;
-	width: 966px;
+	width: 984px;
 	margin-top: 19px;
 	padding-left: 18px;
 	height: 424px;
@@ -291,7 +291,7 @@ body {
 	position: absolute;
 	top: 460px;
 	z-index: 7;
-	width: 680px;
+	/*width: 680px;*/
 	height: 70px;
 	overflow: hidden;
 	right: 27px;

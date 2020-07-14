@@ -28,7 +28,7 @@ public partial class News : System.Web.UI.Page
         try
         {
             string CmdString = @"";
-            CmdString = @"select * from News ";
+            CmdString = @"select * from News order by Inday desc ";
 
             SqlCommand cmd = new SqlCommand(CmdString, Conn);
 

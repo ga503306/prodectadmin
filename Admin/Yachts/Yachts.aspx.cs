@@ -124,7 +124,7 @@ public partial class Admin_Yachts_Yachts : System.Web.UI.Page
     protected void Grid_Yachts_RowDataBound(object sender, GridViewRowEventArgs e)
     {
         int index = 0;
-        index = DB_fountion.tablenametoindex(Grid_Yachts, e, "是否置頂");
+        index = DB_fountion.tablenametoindex(Grid_Yachts, e, "是否最新");
 
         if (e.Row.RowType == DataControlRowType.DataRow)
         {

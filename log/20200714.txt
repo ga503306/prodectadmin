@@ -1,0 +1,235 @@
+2020/7/14 下午 02:06:07        Dealers_Detail:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): 無效的資料行名稱 'id'。
+為 'tstation' 指定了資料行 'R_no' 多次。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 100
+ClientConnectionId:2152fac6-b614-4534-a17f-62a4e1f42e0d
+Error Number:207,State:1,Class:16
+2020/7/14 下午 02:06:29        Dealers_Detail:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): 模稜兩可的資料行名稱 'R_no'。
+為 'tstation' 指定了資料行 'R_no' 多次。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 100
+ClientConnectionId:2152fac6-b614-4534-a17f-62a4e1f42e0d
+Error Number:209,State:1,Class:16
+2020/7/14 下午 02:12:14        Dealers_Detail:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): 為 'tstation' 指定了資料行 'R_no' 多次。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 100
+ClientConnectionId:2152fac6-b614-4534-a17f-62a4e1f42e0d
+Error Number:8156,State:1,Class:16
+2020/7/14 下午 02:12:30        Dealers_Detail:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): 接近關鍵字 'from' 之處的語法不正確。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 104
+ClientConnectionId:2152fac6-b614-4534-a17f-62a4e1f42e0d
+Error Number:156,State:1,Class:15
+2020/7/14 下午 02:22:38        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:22:53        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:23:12        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:23:38        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:24:05        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:24:57        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:25:25        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:25:26        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:25:28        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:25:32        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:25:33        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:25:34        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:25:57        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:26:00        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:26:02        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:26:08        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:26:10        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:26:12        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:26:50        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:28:07        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:39:07        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:39:07        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:39:08        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 02:39:08        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 112
+2020/7/14 下午 03:06:40        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 124
+2020/7/14 下午 03:07:06        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 124
+2020/7/14 下午 03:07:08        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 124
+2020/7/14 下午 03:07:10        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 124
+2020/7/14 下午 03:07:17        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 124
+2020/7/14 下午 03:07:25        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 124
+2020/7/14 下午 03:13:14        Dealers_Detail:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): 參數化查詢 '(@id nvarchar(4000),@start int,@end int)with tstation as (
+    ' 必須有參數 '@id'，但未提供。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 130
+ClientConnectionId:e9fbd9ef-1e6a-4de2-982d-36b5e1beb2dd
+Error Number:8178,State:1,Class:16
+2020/7/14 下午 03:14:59        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133
+2020/7/14 下午 03:18:01        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133
+2020/7/14 下午 03:18:12        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133
+2020/7/14 下午 03:18:21        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133
+2020/7/14 下午 03:18:22        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133
+2020/7/14 下午 03:41:55        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133
+2020/7/14 下午 03:41:57        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133
+2020/7/14 下午 03:42:01        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133

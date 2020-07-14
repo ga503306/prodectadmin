@@ -99,12 +99,15 @@ public partial class Admin_News_News_ins : System.Web.UI.Page
             string ext = System.IO.Path.GetExtension(test.FileName);
             String filename = "Img" + ext;
             String SavePath = "";
+            String SavePath_min = "";
             img_temp.Value = filename;//存回資料庫
             SavePath = Server.MapPath("~/sqlimages/News/" + Newsno + "/" + filename);
+            SavePath_min = Server.MapPath("~/sqlimages/News/" + Newsno);
             img.ImageUrl = "~/sqimages/News/" + Newsno + "/" + filename;
+            DB_fountion.GenerateThumbnailImage(filename, FileUploadimg.FileContent, SavePath_min, "min_", 800, 600);
             FileUploadimg.SaveAs(SavePath);
         }
-    } 
+    }
     #endregion
 
 }
