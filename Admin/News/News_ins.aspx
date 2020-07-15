@@ -1,7 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage/MasterPage.master" validateRequest="False" AutoEventWireup="true" CodeFile="News_ins.aspx.cs" Inherits="Admin_News_News_ins" %>
+<%@ Register Assembly="CKFinder" Namespace="CKFinder" TagPrefix="CKFinder" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <title>最新消息-新增</title>
+    <script src="../../plugins/ckeditor/ckeditor.js"></script>
     <style>
         .img {
             max-height: 150px;
@@ -21,7 +23,8 @@
 
             CKEDITOR.replace('ContentPlaceHolder1_Context_'
                 , {
-                    filebrowserImageUploadUrl: '../../plugins/ckeditor/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Images'
+                    //filebrowserImageUploadUrl: '../../plugins/ckeditor/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Images'
+                    //filebrowserImageUploadUrl: '../../ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Images'
                 })
         });
 
