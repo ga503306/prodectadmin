@@ -7,7 +7,7 @@
             max-height: 150px;
             max-width: 150px;
             margin: 20px;
-        }
+        }test
     </style>
     <script>
         $(function () {
