@@ -4,11 +4,20 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+       <style>
+        .img {
+            max-height: 161px;
+            max-width: 210px;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <!--遮罩-->
     <div class="bannermasks">
-        <img src="images/DEALERS.jpg" alt="&quot;&quot;" width="967" height="371" />
+        <img src="images/DEALERS.jpg" alt="&quot;&quot;" width="967" height="381" />
     </div>
     <!--遮罩結束-->
     <!--------------------------------換圖開始---------------------------------------------------->
@@ -60,7 +69,7 @@
                                             <li class="list02li">
                                                 <div>
                                                     <p>
-                                                        <img src='<%# string.IsNullOrEmpty(Eval("Img").ToString()) ? "images/noimage.png" : "/sqlimages/dealers/" + Eval("D_no")+ "/" + Eval("Img") + "?" + DateTime.Now.ToString("yyyyMMddHHmmss")%>' />>
+                                                        <img class="img" src='<%# string.IsNullOrEmpty(Eval("Img").ToString()) ? "images/noimage.png" : "/sqlimages/dealers/" + Eval("D_no")+ "/" + Eval("Img") + "?" + DateTime.Now.ToString("yyyyMMddHHmmss")%>' />>
                                                     </p>
                                                 </div>
                                             </li>

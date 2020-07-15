@@ -14,7 +14,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <asp:HiddenField ID="id" runat="server" />
     <!--------------------------------右邊選單開始---------------------------------------------------->
-    <div id="crumb"><a href="#">Home</a> >> <a href="News.aspx">News </a>>> <a href="#"><span class="on1">News & Events</span></a></div>
+    <div id="crumb"><a href="News.aspx">Home</a> >> <a href="News.aspx">News </a>>> <a href="#"><span class="on1">News & Events</span></a></div>
     <div class="right">
         <div class="right1">
             <div class="title"><span>News & Events</span></div>

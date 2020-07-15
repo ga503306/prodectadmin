@@ -156,7 +156,7 @@
 
 
                 <!--小圖開始-->
-                <div class="bannerimg title">
+                <div class="bannerimg title" style="display:none;">
                     <ul>
                         <asp:Repeater ID="Rpt_ships" runat="server">
                             <ItemTemplate>

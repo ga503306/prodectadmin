@@ -32,7 +32,7 @@
     <form id="form1" runat="server">
         <div class="contain">
             <div class="sub">
-                <p><a href="#">Home</a></p>
+                <p><a href="Default.aspx">Home</a></p>
             </div>
             <div id="logol">
                 <a href="Default.aspx">

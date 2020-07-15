@@ -1,0 +1,35 @@
+2020/7/15 上午 10:10:18        Yachts_DBinit:頁面:  錯誤訊息:System.Web.HttpException (0x80004005): DataBinding: 'System.Data.DataRowView' 沒有包含名為 'Img' 的屬性。
+   於 System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   於 System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   於 System.Web.UI.DataBinder.Eval(Object container, String expression)
+   於 System.Web.UI.TemplateControl.Eval(String expression)
+   於 ASP.yachts_aspx.__DataBind__control6(Object sender, EventArgs e) 於 d:\火箭\後台\Yachts.aspx: 行 33
+   於 System.Web.UI.Control.OnDataBinding(EventArgs e)
+   於 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   於 System.Web.UI.Control.DataBind()
+   於 System.Web.UI.Control.DataBindChildren()
+   於 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   於 System.Web.UI.Control.DataBind()
+   於 System.Web.UI.WebControls.Repeater.CreateItem(Int32 itemIndex, ListItemType itemType, Boolean dataBind, Object dataItem)
+   於 System.Web.UI.WebControls.Repeater.AddDataItemsIntoItemsArray(IEnumerable dataSource, Boolean useDataSource)
+   於 System.Web.UI.WebControls.Repeater.PostGetDataAction(IEnumerable dataSource)
+   於 System.Web.UI.WebControls.Repeater.CreateControlHierarchy(Boolean useDataSource)
+   於 System.Web.UI.WebControls.Repeater.OnDataBinding(EventArgs e)
+   於 System.Web.UI.WebControls.Repeater.DataBind()
+   於 Yachts.DBinit() 於 d:\火箭\後台\Yachts.aspx.cs: 行 57
+2020/7/15 下午 01:07:46        Yachts_Context_sel:頁面:  錯誤訊息:System.ArgumentException: 資料行 'Overview' 不屬於資料表 。
+   於 System.Data.DataRow.GetDataColumn(String columnName)
+   於 System.Data.DataRow.get_Item(String columnName)
+   於 Yachts_Layout.Context_sel() 於 d:\火箭\後台\Yachts_Layout.aspx.cs: 行 140
+2020/7/15 下午 01:07:52        Yachts_Context_sel:頁面:  錯誤訊息:System.ArgumentException: 資料行 'Overview' 不屬於資料表 。
+   於 System.Data.DataRow.GetDataColumn(String columnName)
+   於 System.Data.DataRow.get_Item(String columnName)
+   於 Yachts_Layout.Context_sel() 於 d:\火箭\後台\Yachts_Layout.aspx.cs: 行 140
+2020/7/15 下午 01:09:13        Yachts_Context_sel:頁面:  錯誤訊息:System.ArgumentException: 資料行 'Overview' 不屬於資料表 。
+   於 System.Data.DataRow.GetDataColumn(String columnName)
+   於 System.Data.DataRow.get_Item(String columnName)
+   於 Yachts_Layout.Context_sel() 於 d:\火箭\後台\Yachts_Layout.aspx.cs: 行 140
+2020/7/15 下午 01:09:15        Yachts_Context_sel:頁面:  錯誤訊息:System.ArgumentException: 資料行 'Overview' 不屬於資料表 。
+   於 System.Data.DataRow.GetDataColumn(String columnName)
+   於 System.Data.DataRow.get_Item(String columnName)
+   於 Yachts_Layout.Context_sel() 於 d:\火箭\後台\Yachts_Layout.aspx.cs: 行 140

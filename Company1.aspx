@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <!--遮罩-->
     <div class="bannermasks">
-        <img src="images/company.jpg" alt="&quot;&quot;" width="967" height="371" />
+        <img src="images/company.jpg" alt="&quot;&quot;" width="967" height="381" />
     </div>
     <!--遮罩結束-->
     <!--------------------------------換圖開始---------------------------------------------------->
@@ -32,10 +32,10 @@
         <!--------------------------------左邊選單結束---------------------------------------------------->
 
         <!--------------------------------右邊選單開始---------------------------------------------------->
-        <div id="crumb"><a href="#">Home</a> >> <a href="#">Company  </a>>> <a href="#"><span class="on1">About Us</span></a></div>
+        <div id="crumb"><a href="Default.aspx">Home</a> >> <a href="#">Company  </a>>> <a href="#"><span class="on1">Certificat</span></a></div>
         <div class="right">
             <div class="right1">
-                <div class="title"><span>About Us</span></div>
+                <div class="title"><span>Certificat</span></div>
 
                 <!--------------------------------內容開始---------------------------------------------------->
                 <div class="box3">

@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <!--遮罩-->
     <div class="bannermasks">
-        <img src="images/contact.jpg" alt="&quot;&quot;" width="967" height="371" />
+        <img src="images/contact.jpg" alt="&quot;&quot;" width="967" height="381" />
     </div>
     <!--遮罩結束-->
     <!--------------------------------換圖開始---------------------------------------------------->

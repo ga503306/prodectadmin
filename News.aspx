@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage/masterpage3.master" AutoEventWireup="true" CodeFile="News.aspx.cs" Inherits="News" %>
 
+<%@ Register Src="~/Pagination.ascx" TagPrefix="uc1" TagName="Pagination" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <style>
         .img {
@@ -17,7 +20,7 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div id="crumb"><a href="#">Home</a> >> <a href="#">News </a>>> <a href="#"><span class="on1">News & Events</span></a></div>
+    <div id="crumb"><a href="Default.aspx">Home</a> >> <a href="News.aspx">News </a>>> <a href="#"><span class="on1">News & Events</span></a></div>
     <div class="right">
         <div class="right1">
             <div class="title"><span>News & Events</span></div>
@@ -66,9 +69,9 @@
                         </div>
                     </li>--%>
                 </ul>
-
-                <div class="pagenumber">| <span>1</span> | <a href="#">2</a> | <a href="#">3</a> | <a href="#">4</a> | <a href="#">5</a> |  <a href="#">Next</a>  <a href="#">LastPage</a></div>
-                <div class="pagenumber1">Items：<span>89</span>  |  Pages：<span>1/9</span></div>
+                <uc1:Pagination runat="server" ID="Pagination1" />
+              <%--  <div class="pagenumber">| <span>1</span> | <a href="#">2</a> | <a href="#">3</a> | <a href="#">4</a> | <a href="#">5</a> |  <a href="#">Next</a>  <a href="#">LastPage</a></div>
+                <div class="pagenumber1">Items：<span>89</span>  |  Pages：<span>1/9</span></div>--%>
 
 
             </div>
