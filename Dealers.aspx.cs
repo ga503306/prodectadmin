@@ -131,7 +131,7 @@ public partial class Dealers : System.Web.UI.Page
             SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
             dt.Load(dr);
             title.InnerText = dt.Rows[0]["Region"].ToString(); //title
-
+            title_nav.InnerText = dt.Rows[0]["Region"].ToString(); //title
             //分頁
             SqlCommand totalcommand;
             if (id == "")

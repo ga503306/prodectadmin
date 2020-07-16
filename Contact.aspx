@@ -1,6 +1,41 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage/masterpage2.master" AutoEventWireup="true" CodeFile="Contact.aspx.cs" Inherits="Contact" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <script>
+        $(function () {
+            submit();
+        });
+        function submit() {
+            $("#form1").submit(function (e) {
+                e.preventDefault();
+                var name = $("#ContentPlaceHolder1_name").val();
+                var email = $("#ContentPlaceHolder1_email").val();
+                var phone = $("#ContentPlaceHolder1_phone").val();
+                var dl_Region = $("#ContentPlaceHolder1_dl_Region option:selected").text();
+                var dl_Yachts = $("#ContentPlaceHolder1_dl_Yachts option:selected").text();
+                var comments = $("#ContentPlaceHolder1_comments").val();
+                var postData = { name: name, email: email, phone: phone, dl_Region: dl_Region, dl_Yachts: dl_Yachts, comments: comments };
+                $.ajax({
+                    type: "POST",
+                    url: "api/Contact/sendmail.ashx",
+                    data: JSON.stringify(postData),
+                    beforeSend: function () {
+                        loading(true);
+                    },
+                    complete: function () {
+                        loading(false);
+                    },
+                    success: function (data) {
+                        if (data == "成功")
+                            swal("已寄出！", "", "success")
+                        else
+                            swal("失敗！", "", "error")
+                    }
+                });
+            });
+           
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <!--遮罩-->
@@ -15,39 +50,22 @@
             <li>
                 <img src="images/newbanner.jpg" alt="Tayana Yachts" /></li>
         </ul>
-
     </div>
     <!--------------------------------換圖結束---------------------------------------------------->
-
     <div class="conbg">
         <!--------------------------------左邊選單開始---------------------------------------------------->
         <div class="left">
-
             <div class="left1">
                 <p><span>CONTACT</span></p>
                 <ul>
                     <li><a href="#">contacts</a></li>
                 </ul>
-
-
-
             </div>
-
-
-
-
         </div>
-
-
-
-
-
-
-
         <!--------------------------------左邊選單結束---------------------------------------------------->
 
         <!--------------------------------右邊選單開始---------------------------------------------------->
-        <div id="crumb"><a href="#">Home</a> >> <a href="#"><span class="on1">Contact</span></a></div>
+        <div id="crumb"><a href="Default.aspx">Home</a> >> <a href="#"><span class="on1">Contact</span></a></div>
         <div class="right">
             <div class="right1">
                 <div class="title"><span>Contact</span></div>
@@ -102,9 +120,11 @@
                         </tr>
                         <tr>
                             <td class="from01td01">&nbsp;</td>
-                            <td class="f_right"><a href="#">
+                            <td class="f_right"><%--<a onclick="btn_Sendmail()"><img src="images/buttom03.gif" alt="submit" width="59" height="25" /></a>--%>
+                               <input type="image" alt="Submit"  src="images/buttom03.gif" style="border-width:0px;" />
                                 <%--<img src="images/buttom03.gif" alt="submit" width="59" height="25" /></a>--%>
-                                <asp:ImageButton ID="btn_submit" runat="server" ImageUrl="images/buttom03.gif" Style="width: 59px; height: 25px;" OnClick="btn_submit_Click" />
+                            <%--    <asp:ImageButton ID="btn_submit" runat="server" ImageUrl="images/buttom03.gif" Style="width: 59px; height: 25px;" OnClick="btn_submit_Click" />--%>
+                            
                             </td>
                         </tr>
                     </table>

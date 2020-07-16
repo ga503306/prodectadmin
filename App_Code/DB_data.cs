@@ -156,7 +156,42 @@ public class DB_data
 
         return str_json;
     }
-    //權限群組 checkbox儲存--auth_edit.aspx--btn_save
+
+    //首頁 寄信--contact.aspx--sendmail
+    public static string sendmail(string name, string email, string phone, string dl_Region, string dl_Yachts, string comments)
+    {
+        string result = "";
+        try
+        {
+            //寄信
+            using (var mySmtp = new System.Net.Mail.SmtpClient("smtp.gmail.com", 587))
+            {
+                mySmtp.Credentials = new System.Net.NetworkCredential("ga203306@gmail.com", "38xxx5438");
+                mySmtp.EnableSsl = true;
+                mySmtp.Send("ga203306@gmail.com",
+                "ga203306@yahoo.com.tw",
+                "線上填寫表單:",
+                "Name " + name + "\n" +
+                "Email " + email + "\n" +
+                "Phone " + phone + "\n" +
+                "Region " + dl_Region + "\n" +
+                "Yachts " + dl_Yachts + "\n" +
+                "Comments " + comments + "\n"
+               );
+            }
+            result = "成功";
+        }
+        catch (Exception ex)
+        {
+            DB_string.log("寄信失敗:", ex.ToString());
+            result = "失敗";
+        }
+        finally
+        {
+        }
+       
+        return result;
+    }
 
 }
 
