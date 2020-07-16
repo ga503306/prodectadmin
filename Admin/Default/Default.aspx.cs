@@ -9,6 +9,15 @@ public partial class Admin_NewFolder1_Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (!IsPostBack)
+        {
+            if (Session["Username"] == null)
+            {
+                Response.Redirect("../../login.aspx");
+            }
+            else
+            {
+            }
+        }
     }
 }

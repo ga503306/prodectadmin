@@ -156,6 +156,7 @@ public partial class Yachts : System.Web.UI.Page
     }
     #endregion
 
+    #region Other
     protected string isnew(string state)
     {
         string result = "";
@@ -171,5 +172,6 @@ public partial class Yachts : System.Web.UI.Page
                 break;
         }
         return result;
-    }
+    } 
+    #endregion
 }

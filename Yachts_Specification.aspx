@@ -111,7 +111,7 @@
                 <ul>
                     <asp:Repeater ID="Rpt_Shiptype" runat="server">
                         <ItemTemplate>
-                            <li><a href="Yachts.aspx?id=<%# Eval("Yachtsno") %>"><%# Eval("Modal") + " " + Eval("Modal_n") %></a></li>
+                            <li><a href="Yachts_Specification.aspx?id=<%# Eval("Yachtsno") %>"><%# Eval("Modal") + " " + Eval("Modal_n") + isnew(Eval("Isnew").ToString()) %></a></li>
                         </ItemTemplate>
                     </asp:Repeater>
                     <%-- <li><a href="#">Dynasty 72</a></li>

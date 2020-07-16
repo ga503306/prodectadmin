@@ -14,7 +14,6 @@ public partial class masterpage_MasterPage : System.Web.UI.MasterPage
     {
         if (Session["Username"] == null)
         {
-            Response.Redirect("../login.aspx");
         }
         else
         {

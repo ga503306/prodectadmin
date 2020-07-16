@@ -73,7 +73,7 @@ public partial class Yachts_Specification : System.Web.UI.Page
         try
         {
             string CmdString = @"";
-            CmdString = @" select Yachtsno,Modal,Modal_n from Yachts ";
+            CmdString = @" select Yachtsno,Modal,Modal_n,Isnew from Yachts ";
 
             SqlCommand cmd = new SqlCommand(CmdString, Conn);
 
@@ -152,6 +152,25 @@ public partial class Yachts_Specification : System.Web.UI.Page
         {
             Conn.Close();
         }
+    }
+    #endregion
+
+    #region Other
+    protected string isnew(string state)
+    {
+        string result = "";
+        switch (state)
+        {
+            case "1":
+                result = " (New Building)";
+                break;
+            case "0":
+                result = "";
+                break;
+            default:
+                break;
+        }
+        return result;
     }
     #endregion
 }
