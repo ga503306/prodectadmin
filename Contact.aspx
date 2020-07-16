@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <script>
-        $(function () {11111111s
+        $(function () {
             submit();
         });
         function submit() {
