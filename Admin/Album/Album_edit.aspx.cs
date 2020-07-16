@@ -79,9 +79,16 @@ public partial class Admin_Album_Album_edit : System.Web.UI.Page
                 //新增資料夾
                 Directory.CreateDirectory(HttpContext.Current.Server.MapPath("/") + @"/sqlimages/Album/" + id.Value);
             }
+            if (!Directory.Exists(HttpContext.Current.Server.MapPath("/") + @"/sqlimages/min_Album/" + id.Value))
+            {
+                //新增資料夾
+                Directory.CreateDirectory(HttpContext.Current.Server.MapPath("/") + @"/sqlimages/min_Album/" + id.Value);
+            }
             string ext = System.IO.Path.GetExtension(FileUpload1.FileName);
             String FileName = DateTime.Now.ToString("yyyyMMddHHmmss") + ext;
             String SavePath = Server.MapPath("/") + @"/sqlimages/Album/" + id.Value + "/" + FileName;
+            String SavePath_min = Server.MapPath("~/sqlimages/min_Album/" + id.Value);
+            DB_fountion.GenerateThumbnailImage(FileName, FileUpload1.FileContent, SavePath_min, "", 200, 63);
             this.FileUpload1.SaveAs(SavePath);
         }
 

@@ -43,7 +43,7 @@
                             <ItemTemplate>
                                 <li>
                                     <a href='<%# string.IsNullOrEmpty(Eval("strFilename").ToString()) ? "images/noimage.png" : "/sqlimages/Album/" + Eval("strFilename")+ "?" + DateTime.Now.ToString("yyyyMMddHHmmss")%>' />
-                                    <img class="img" src='<%# string.IsNullOrEmpty(Eval("strFilename").ToString()) ? "images/noimage.png" : "/sqlimages/Album/" + Eval("strFilename")+ "?" + DateTime.Now.ToString("yyyyMMddHHmmss")%>' />
+                                    <img class="img" src='<%# string.IsNullOrEmpty(Eval("strFilename").ToString()) ? "images/noimage.png" : "/sqlimages/min_Album/" + Eval("strFilename")+ "?" + DateTime.Now.ToString("yyyyMMddHHmmss")%>' />
                                     </a>
                                 </li>
                             </ItemTemplate>
