@@ -4,6 +4,7 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <link rel="stylesheet" type="text/css" href="css/pagination.css" />
     <style>
         .img {
             max-height: 161px;
@@ -70,10 +71,8 @@
                     </li>--%>
                 </ul>
                 <uc1:Pagination runat="server" ID="Pagination1" />
-              <%--  <div class="pagenumber">| <span>1</span> | <a href="#">2</a> | <a href="#">3</a> | <a href="#">4</a> | <a href="#">5</a> |  <a href="#">Next</a>  <a href="#">LastPage</a></div>
+                <%--  <div class="pagenumber">| <span>1</span> | <a href="#">2</a> | <a href="#">3</a> | <a href="#">4</a> | <a href="#">5</a> |  <a href="#">Next</a>  <a href="#">LastPage</a></div>
                 <div class="pagenumber1">Items：<span>89</span>  |  Pages：<span>1/9</span></div>--%>
-
-
             </div>
 
 

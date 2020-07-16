@@ -4,7 +4,8 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-       <style>
+    <link rel="stylesheet" type="text/css" href="css/pagination.css" />
+    <style>
         .img {
             max-height: 161px;
             max-width: 210px;
@@ -44,7 +45,7 @@
                             </li>
                         </ItemTemplate>
                     </asp:Repeater>
-<%--                    <li><a href="#">Unite States</a></li>
+                    <%--                    <li><a href="#">Unite States</a></li>
                     <li><a href="#">Europe</a></li>
                     <li><a href="#">Asia</a></li>--%>
                 </ul>
@@ -152,10 +153,8 @@
                         </li>--%>
                     </ul>
 
-                 <%--   <div class="pagenumber">| <span>1</span> | <a href="#">2</a> | <a href="#">3</a> | <a href="#">4</a> | <a href="#">5</a> |  <a href="#">Next</a>  <a href="#">LastPage</a></div>
+                    <%--   <div class="pagenumber">| <span>1</span> | <a href="#">2</a> | <a href="#">3</a> | <a href="#">4</a> | <a href="#">5</a> |  <a href="#">Next</a>  <a href="#">LastPage</a></div>
                     <div class="pagenumber1">Items：<span>89</span>  |  Pages：<span>1/9</span></div>--%>
-
-                  
                 </div>
                 <uc1:Pagination runat="server" ID="Pagination1" />
                 <!--------------------------------內容結束------------------------------------------------------>

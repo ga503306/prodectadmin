@@ -73,7 +73,7 @@ public partial class Yachts : System.Web.UI.Page
         try
         {
             string CmdString = @"";
-            CmdString = @" select Yachtsno,Modal,Modal_n from Yachts ";
+            CmdString = @" select Yachtsno,Modal,Modal_n,Isnew from Yachts ";
 
             SqlCommand cmd = new SqlCommand(CmdString, Conn);
 
@@ -129,7 +129,7 @@ public partial class Yachts : System.Web.UI.Page
         try
         {
             string CmdString = @"";
-            CmdString = @" select Modal,Modal_n,Overview from Yachts where Yachtsno = @id";
+            CmdString = @" select Modal,Modal_n,Overview,Files from Yachts where Yachtsno = @id";
 
             SqlCommand cmd = new SqlCommand(CmdString, Conn);
             cmd.Parameters.AddWithValue("id", id.Value);
@@ -140,6 +140,9 @@ public partial class Yachts : System.Web.UI.Page
                 context.InnerHtml = dt.Rows[0]["Overview"].ToString();
                 ship_name.InnerText = dt.Rows[0]["Modal"].ToString() + " " + dt.Rows[0]["Modal_n"].ToString();
                 ship_name_nav.InnerText = dt.Rows[0]["Modal"].ToString() + " " + dt.Rows[0]["Modal_n"].ToString();
+                //檔案
+                file_url.HRef = "~/sqlimages/Yachts_file/" + id.Value + "/" + dt.Rows[0]["Files"].ToString();
+                file_url.InnerText = dt.Rows[0]["Files"].ToString();
             }
         }
         catch (Exception ex)
@@ -152,4 +155,21 @@ public partial class Yachts : System.Web.UI.Page
         }
     }
     #endregion
+
+    protected string isnew(string state)
+    {
+        string result = "";
+        switch (state)
+        {
+            case "1":
+                result = " (New Building)";
+                break;
+            case "0":
+                result = "";
+                break;
+            default:
+                break;
+        }
+        return result;
+    }
 }

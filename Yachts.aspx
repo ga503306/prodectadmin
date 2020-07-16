@@ -111,7 +111,7 @@
                 <ul>
                     <asp:Repeater ID="Rpt_Shiptype" runat="server">
                         <ItemTemplate>
-                            <li><a href="Yachts.aspx?id=<%# Eval("Yachtsno") %>"><%# Eval("Modal") + " " + Eval("Modal_n") %></a></li>
+                            <li><a href="Yachts.aspx?id=<%# Eval("Yachtsno") %>"><%# Eval("Modal") + " " + Eval("Modal_n") + isnew(Eval("Isnew").ToString()) %></a></li>
                         </ItemTemplate>
                     </asp:Repeater>
                     <%-- <li><a href="#">Dynasty 72</a></li>
@@ -225,21 +225,17 @@
                 <p class="topbuttom">
                     <img src="images/top.gif" alt="top" />
                 </p>
-
+                    --%>
                 <!--下載開始-->
                 <div class="downloads">
                     <p>
                         <img src="images/downloads.gif" alt="&quot;&quot;" />
                     </p>
                     <ul>
-                        <li><a href="#">Downloads 001</a></li>
-                        <li><a href="#">Downloads 001</a></li>
-                        <li><a href="#">Downloads 001</a></li>
-                        <li><a href="#">Downloads 001</a></li>
-                        <li><a href="#">Downloads 001</a></li>
+                        <li> <a id="file_url"  runat="server" target="_blank">下載</a></li>
                     </ul>
                 </div>
-                <!--下載結束-->--%>
+                <!--下載結束-->
 
                 <!--------------------------------內容結束------------------------------------------------------>
             </div>

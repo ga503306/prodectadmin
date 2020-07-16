@@ -7,7 +7,7 @@
             max-height: 150px;
             max-width: 150px;
             margin: 20px;
-        }test
+        }
     </style>
     <script>
         $(function () {
@@ -170,12 +170,25 @@
                     <div class="col-lg-12 form-horizontal">
                         <div class="form-group">
                             <label class="col-sm-1 control-label">檔案上傳:</label>
-                            <div class="col-sm-11">
-                                <asp:FileUpload ID="FileUpload1" runat="server" />
+                            <div class="col-sm-11" style="padding-top: 7px;">
+                                <a id="file_url" target="_blank" runat="server">下載</a>
                             </div>
+
+
                         </div>
+
                     </div>
                 </div>
+                <div class="col-lg-12 m-t-5">
+                    <div class="col-lg-1 form-horizontal">
+                    </div>
+                    <div class="col-lg-11 form-horizontal">
+                        <asp:FileUpload ID="FileUploadfile" runat="server" />
+                        <asp:HiddenField ID="file_temp" runat="server" />
+                    </div>
+
+                </div>
+
 
                 <div class="clear"></div>
             </div>
