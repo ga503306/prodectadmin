@@ -51,7 +51,6 @@
                 timer = setTimeout(move, speed);
             });
             //首次進入
-            var _index = $('.title ul li.on', $block).index();
             $li.eq(0).click()
             // 控制輪播
             function move() {

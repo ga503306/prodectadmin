@@ -65,7 +65,7 @@ public partial class Admin_Employee_Employee : System.Web.UI.Page
 
     protected void ins_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Employee_edit.aspx?type=basic&action=ins");
+        Response.Redirect("Employee_ins.aspx?type=basic");
     }
 
     protected void Del_Click(string Username)
@@ -105,7 +105,6 @@ public partial class Admin_Employee_Employee : System.Web.UI.Page
     {
         if (e.CommandName == "Edit")
         {
-            Session["type"] = "edit";
             int indexid = Convert.ToInt16(e.CommandArgument.ToString());
             string id = Grid_Employee.Rows[indexid].Cells[1].Text;
             Response.Redirect("Employee_edit.aspx?type=basic&action=edit&id=" + id);

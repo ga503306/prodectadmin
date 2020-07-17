@@ -260,4 +260,25 @@ function Set_Table(file, id) {
         //console.log("錯誤訊息:" + e);
     }
     $("#ContentPlaceHolder1_GridView1_filter").css("display", "none");
+
+   
+}
+
+function Del_check(btn) {
+    event.preventDefault();
+    swal({
+        title: "確認删除!?",
+        showCancelButton: true,
+        confirmButtonColor: "#dd3333",
+        confirmButtonText: "删除",
+        cancelButtonText: "取消"
+    },
+        function (isConfirm) {
+            if (isConfirm) {
+                $(btn).click();
+                return true;
+            } else {
+                return false;
+            }
+        });
 }

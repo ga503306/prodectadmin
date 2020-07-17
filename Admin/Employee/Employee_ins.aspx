@@ -8,6 +8,7 @@
         <h4 id="head_title" class="page-title">帳號</h4>
         <div class="clearfix"></div>
     </div>
+      <asp:HiddenField runat="server" ID="id"/>
     <div class="row">
         <div id="view" class="col-md-12 col-sm-9">
             <div class="white-box list2">
@@ -42,9 +43,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 form-horizontal" style="display: none;">
+                    <div class="col-lg-3 form-horizontal" >
                         <div class="form-group">
-                            <label class="col-sm-4 control-label">密碼:</label>
+                            <label class="col-sm-4 control-label"><span style="color: #ff0000">*</span>密碼:</label>
                             <div class="col-sm-8">
                                 <input class="form-control" id="Password" type="text" runat="server" maxlength="20" />
                             </div>

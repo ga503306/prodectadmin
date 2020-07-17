@@ -9,7 +9,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
 
-public partial class Admin_Employee_Employee_edit : System.Web.UI.Page
+
+public partial class Admin_Employee_Employee_ins : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -27,11 +28,10 @@ public partial class Admin_Employee_Employee_edit : System.Web.UI.Page
                     id.Value = Request.QueryString["id"];
                     Employee(id.Value);
                 }
-               
+
             }
         }
     }
-
     #region Data
     public void Employee(string id)
     {
@@ -82,7 +82,7 @@ public partial class Admin_Employee_Employee_edit : System.Web.UI.Page
     #region Button
     protected void save_Check(object sender, EventArgs e)
     {
-        if (Username.Value == "")
+        if (Username.Value == "" || Password.Value == "")
         {
             ScriptManager.RegisterStartupScript(Page, GetType(), "alert", "<script>swal('*號欄位不可為空值')</script>", false);
         }
@@ -101,31 +101,16 @@ public partial class Admin_Employee_Employee_edit : System.Web.UI.Page
         DataTable dt = new DataTable();
         try
         {
-            string state = Request.QueryString["action"];
-            //string id = "";
-
-            //if ((Session["id"] != null) && (Session["id"].ToString() != ""))
-            //{
-            //    id = Session["id"].ToString();
-            //}
-
             string CmdString = @"";
-            if (state == "ins")
-            {
-                CmdString = @"insert into Employee (Username,Password,Auth) 
-                              values (@Username,@Password,@Auth)";
 
-            }
-            else
-            {//,Password=@Password
-                CmdString = @"update Employee set Username=@Username,Auth=@Auth where Username=@id";
-            }
+            CmdString = @"insert into Employee (Username,Password,Auth)  values (@Username,@Password,@Auth)"; 
+        
 
             SqlCommand cmd = new SqlCommand(CmdString, Conn);
             cmd.Parameters.AddWithValue("id", id.Value);
             cmd.Parameters.AddWithValue("Username", Username.Value);
-            //string des_Password = DB_fountion.EncryptDES(Password.Value);//加密
-            //cmd.Parameters.AddWithValue("Password", des_Password);
+            string des_Password = DB_fountion.EncryptDES(Password.Value);//加密
+            cmd.Parameters.AddWithValue("Password", des_Password);
             cmd.Parameters.AddWithValue("Auth", Auth.SelectedValue);
 
             cmd.ExecuteNonQuery();
@@ -133,7 +118,7 @@ public partial class Admin_Employee_Employee_edit : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            DB_string.log("Employee_edit:", ex.ToString());
+            DB_string.log("Employee_ins:", ex.ToString());
         }
         finally
         {
@@ -160,7 +145,7 @@ public partial class Admin_Employee_Employee_edit : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            DB_string.log("Employee_del:", ex.ToString());
+            DB_string.log("Employee_ins_del:", ex.ToString());
             ScriptManager.RegisterStartupScript(Page, GetType(), "alert", "<script>swal('刪除失敗')</script>", false);
         }
         finally
@@ -168,7 +153,6 @@ public partial class Admin_Employee_Employee_edit : System.Web.UI.Page
             Conn.Close();
             Response.Redirect("Employee.aspx?type=basic");
         }
-    } 
+    }
     #endregion
-
 }

@@ -22,7 +22,7 @@
     <div class="white-box list2">
         <div class="col-lg-3 m-t-5 p-l-0 p-r-0">
             <div class="col-lg-12">
-                <a class="btn btn-info" onclick="edit('ins','')" style="display:none"><i class="fa fa fa-plus"></i>&nbsp;<span>新增</span>&nbsp;</a>
+                <a class="btn btn-info" onclick="edit('ins','')" ><i class="fa fa fa-plus"></i>&nbsp;<span>新增</span>&nbsp;</a>
                 <asp:Button ID="ins" runat="server" Text="Button" OnClick="ins_Click" Style="display: none" />
             </div>
         </div>
@@ -36,16 +36,20 @@
                         <ControlStyle Width="18px" />
                         <HeaderStyle Width="18px"></HeaderStyle>
                     </asp:ButtonField>
-                    <asp:BoundField DataField="Username" HeaderText="帳號"  HeaderStyle-Width="90px">
-                        <HeaderStyle Width="90px" />
+                    <asp:BoundField DataField="Username" HeaderText="帳號" >
                     </asp:BoundField>
                     <asp:BoundField DataField="Group_name" HeaderText="權限"  HeaderStyle-Width="90px">
                         <HeaderStyle Width="90px" />
                     </asp:BoundField>
-                    <asp:ButtonField ButtonType="Image" ImageUrl="~/images/icon/刪除紅.png" HeaderStyle-Width="18px" CommandName="Del">
+                    <asp:TemplateField ShowHeader="False" HeaderStyle-Width="18px">
+                                <ItemTemplate>
+                                    <asp:ImageButton ID="Button2" ImageUrl="~/images/icon/刪除紅.png" runat="server" CausesValidation="False" CommandName="Del" Text="刪除" OnClientClick="return Del_check(this);" Width="18px" CommandArgument='<%#Container.DataItemIndex%>' />
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                    <%--<asp:ButtonField ButtonType="Image" ImageUrl="~/images/icon/刪除紅.png" HeaderStyle-Width="18px" CommandName="Del">
                         <ControlStyle Width="18px" />
                         <HeaderStyle Width="18px"></HeaderStyle>
-                    </asp:ButtonField>
+                    </asp:ButtonField>--%>
                 </Columns>
                 <EmptyDataRowStyle HorizontalAlign="Center" />
                 <PagerStyle CssClass="fvPagerStyle" BackColor="White" HorizontalAlign="Center" />
