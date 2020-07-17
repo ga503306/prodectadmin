@@ -343,14 +343,14 @@ body {
 }
 .wordtitle {
 	position: absolute;
-	left: 50px;
-	top: 468px;
+	top: 450px;
 	font-size: 160%;
 	color: #FFFFFF;
 	z-index: 15;
 	width: 230px;
 	font-style: italic;
 	font-weight: bold;
+	right: 35px;
 }
 .wordtitle h2 {
 	color: #FFFFFF;
