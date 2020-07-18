@@ -53,8 +53,8 @@ public class DB_string
             string CmdString = @"select * from Employee where Username=@Username and Password=@Password ";
             SqlCommand cmd = new SqlCommand(CmdString, Conn); 
             cmd.Parameters.AddWithValue("Username", Username);
-            string des_Password = DB_fountion.EncryptDES(Password);//加密
-            cmd.Parameters.AddWithValue("Password", des_Password);
+            //string des_Password = DB_fountion.EncryptDES(Password);//加密
+            cmd.Parameters.AddWithValue("Password", Password);
             Conn.Open();
             SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
             dt.Load(dr);

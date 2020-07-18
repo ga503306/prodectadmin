@@ -19,7 +19,7 @@ public partial class masterpage_MasterPage : System.Web.UI.MasterPage
         else
         {
             Username.Value = Session["Username"].ToString();
-            Sel_sidebar();
+            //Sel_sidebar();
         }
     }
     #region Data
