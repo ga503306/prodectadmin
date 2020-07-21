@@ -228,9 +228,9 @@
                     <li>
                         <div class="news01">
                             <!--TOP標籤-->
-                            <%--<div class="newstop">
-                                <img src="images/new_top01.png" alt="&quot;&quot;" />
-                            </div>--%>
+                            <div class="newstop">
+                                <img src="images/new_top01.png" alt="&quot;&quot;" style="<%# isnew(Eval("Priority").ToString()) %>" />
+                            </div>
                             <!--TOP標籤結束-->
                             <div class="news02p1">
                                 <p class="news02p1img">
