@@ -26,6 +26,7 @@ public partial class Yachts : System.Web.UI.Page
                 Default_sel();//第一次進
             //輪播
             DBinit();
+            ViewFile(id.Value);
             Context_sel();//內容
         }
     }
@@ -140,9 +141,6 @@ public partial class Yachts : System.Web.UI.Page
                 context.InnerHtml = dt.Rows[0]["Overview"].ToString();
                 ship_name.InnerText = dt.Rows[0]["Modal"].ToString() + " " + dt.Rows[0]["Modal_n"].ToString();
                 ship_name_nav.InnerText = dt.Rows[0]["Modal"].ToString() + " " + dt.Rows[0]["Modal_n"].ToString();
-                //檔案
-                file_url.HRef = "~/sqlimages/Yachts_file/" + id.Value + "/" + dt.Rows[0]["Files"].ToString();
-                file_url.InnerText = dt.Rows[0]["Files"].ToString();
             }
         }
         catch (Exception ex)
@@ -153,6 +151,37 @@ public partial class Yachts : System.Web.UI.Page
         {
             Conn.Close();
         }
+    }
+
+    protected void ViewFile(string id)
+    {
+        string BeginsavePath = @"~/sqlimages/File" + id + "/";
+        if (!Directory.Exists(HttpContext.Current.Server.MapPath("~") + @"\sqlimages\File\" + id))
+        {
+            Directory.CreateDirectory(HttpContext.Current.Server.MapPath("~") + @"\sqlimages\File\" + id);
+        }
+
+
+        DataTable dt = new DataTable();
+        dt.Columns.Add("FileName", typeof(String));
+        dt.Columns.Add("FilePath", typeof(String));
+        dt.Columns.Add("FileMapPath", typeof(String));
+        dt.Columns.Add("addr", typeof(String));
+
+        foreach (string FilePath in System.IO.Directory.GetFileSystemEntries(
+                 Server.MapPath("~") + @"/sqlimages/File/" + id + "/"))
+        {
+            string[] File = FilePath.Split('/');
+            int indexid = File.GetUpperBound(0);
+            string FileName = File[indexid];
+            string addr = @"sqlimages\File\" + id + "\\";
+            string FileMapPath = @"sqlimages\File\" + id + "\\" + FileName;
+
+            dt.Rows.Add(FileName, FilePath, FileMapPath, addr);
+        }
+        ViewState["ViewPath"] = dt;
+        Rpt_File.DataSource = dt;
+        Rpt_File.DataBind();
     }
     #endregion
 

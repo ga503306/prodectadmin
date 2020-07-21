@@ -225,14 +225,18 @@
                 <p class="topbuttom">
                     <img src="images/top.gif" alt="top" />
                 </p>
-                    --%>
+                --%>
                 <!--下載開始-->
                 <div class="downloads">
                     <p>
                         <img src="images/downloads.gif" alt="&quot;&quot;" />
                     </p>
                     <ul>
-                        <li> <a id="file_url"  runat="server" target="_blank">下載</a></li>
+                        <asp:Repeater ID="Rpt_File" runat="server">
+                            <ItemTemplate>
+                                <li><a id="file_url" href='<%# Eval("FileMapPath") %>' runat="server" target="_blank"><%# Eval("FileName") %></a></li>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </ul>
                 </div>
                 <!--下載結束-->

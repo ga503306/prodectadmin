@@ -9,7 +9,8 @@ function setupEnterToNext() {
     $(':input').keydown(function (e) {
 
         if (e.keyCode == 13 /*Enter*/) {
-
+            if (this.type == "textarea")
+                return
             // focus next input elements
             $(':input:visible:enabled:eq(' + ($(':input:visible:enabled').index(this) + 1) + ')').focus();
             e.preventDefault();

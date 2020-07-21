@@ -1,0 +1,2 @@
+2020/7/20 下午 01:57:59        寄信失敗:頁面:  錯誤訊息:System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 DB_data.sendmail(String name, String email, String phone, String dl_Region, String dl_Yachts, String comments) 於 d:\火箭\後台\App_Code\DB_data.cs: 行 176

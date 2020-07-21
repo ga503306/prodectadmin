@@ -113,6 +113,7 @@ public partial class Admin_Yachts_Yachts : System.Web.UI.Page
             string id = Grid_Yachts.Rows[indexid].Cells[1].Text;
             Del_Click(id);
             del_img(id);
+            del_file(id);
         }
     }
 
@@ -154,6 +155,23 @@ public partial class Admin_Yachts_Yachts : System.Web.UI.Page
         {
             //刪除
             String DelPath = Server.MapPath("~/sqlimages/Album/" + id);
+            Directory.Delete(DelPath, true);
+        }
+        catch
+        {
+
+        }
+    }
+
+    protected void del_file(string id)
+    {
+        try
+        {
+            //刪除
+            String DelPath = Server.MapPath("~/sqlimages/File/" + id);
+            Directory.Delete(DelPath, true);
+            //刪除
+            DelPath = Server.MapPath("~/sqlimages/File/" + id);
             Directory.Delete(DelPath, true);
         }
         catch

@@ -115,7 +115,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-12 m-t-5">
+                <%--<div class="col-lg-12 m-t-5">
                     <div class="col-lg-12 form-horizontal">
                         <div class="form-group">
                             <label class="col-sm-1 control-label">檔案上傳:</label>
@@ -124,7 +124,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>--%>
 
                 <div class="clear"></div>
             </div>

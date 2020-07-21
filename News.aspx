@@ -36,7 +36,7 @@
                                         <li>
                                             <div>
                                                 <p>
-                                                    <img class="img" src='<%# string.IsNullOrEmpty(Eval("Img").ToString()) ? "images/noimage.png" : "/sqlimages/News/" + Eval("Newsno")+ "/" + Eval("Img") + "?" + DateTime.Now.ToString("yyyyMMddHHmmss")%>' alt="&quot;&quot;" />
+                                                    <img class="img" src='<%# string.IsNullOrEmpty(Eval("Img").ToString()) ? "images/noimage.png" : "/sqlimages/News/" + Eval("Newsno")+ "/min_" + Eval("Img") + "?" + DateTime.Now.ToString("yyyyMMddHHmmss")%>' alt="&quot;&quot;" />
                                                 </p>
                                             </div>
                                         </li>
@@ -70,6 +70,7 @@
                         </div>
                     </li>--%>
                 </ul>
+              
                 <uc1:Pagination runat="server" ID="Pagination1" />
                 <%--  <div class="pagenumber">| <span>1</span> | <a href="#">2</a> | <a href="#">3</a> | <a href="#">4</a> | <a href="#">5</a> |  <a href="#">Next</a>  <a href="#">LastPage</a></div>
                 <div class="pagenumber1">Items：<span>89</span>  |  Pages：<span>1/9</span></div>--%>

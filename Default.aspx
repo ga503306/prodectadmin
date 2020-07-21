@@ -64,7 +64,7 @@
             // 啟動計時器
             timer = setTimeout(move, speed);
 
-            var len = 25; // 超過兩行以"..."取代
+            var len = 70; // 超過兩行以"..."取代
             $(".JQellipsis").each(function (i) {
                 if ($(this)[0].textContent.length > len) {
                     $(this).attr("title", $(this).text());
@@ -228,16 +228,16 @@
                     <li>
                         <div class="news01">
                             <!--TOP標籤-->
-                            <div class="newstop">
+                            <%--<div class="newstop">
                                 <img src="images/new_top01.png" alt="&quot;&quot;" />
-                            </div>
+                            </div>--%>
                             <!--TOP標籤結束-->
                             <div class="news02p1">
                                 <p class="news02p1img">
                                     <img class="imgnews" src='<%# string.IsNullOrEmpty(Eval("Img").ToString()) ? "images/noimage.png" : "/sqlimages/News/" + Eval("Newsno")+ "/" + Eval("Img") + "?" + DateTime.Now.ToString("yyyyMMddHHmmss")%>' alt="&quot;&quot;" />
                                 </p>
                             </div>
-                            <p class="news02p2"><span class="JQellipsis"><%# Eval("Title") %></span> <a onclick='get_url(<%# Eval("Newsno") %>);' href="#"><%# Eval("Info") %></a></p>
+                            <p class="news02p2"><span><%# System.Convert.ToDateTime(Eval("Inday")).ToString("yyyy/MM/dd") %></span> <a class="JQellipsis" onclick='get_url(<%# Eval("Newsno") %>);' href="#"><%# Eval("Info") %></a></p>
                         </div>
                     </li>
                 </ItemTemplate>

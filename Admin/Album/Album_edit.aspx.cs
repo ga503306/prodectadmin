@@ -88,11 +88,16 @@ public partial class Admin_Album_Album_edit : System.Web.UI.Page
             String FileName = DateTime.Now.ToString("yyyyMMddHHmmss") + ext;
             String SavePath = Server.MapPath("/") + @"/sqlimages/Album/" + id.Value + "/" + FileName;
             String SavePath_min = Server.MapPath("~/sqlimages/min_Album/" + id.Value);
-            DB_fountion.GenerateThumbnailImage(FileName, FileUpload1.FileContent, SavePath_min, "", 200, 63);
+            DB_fountion.GenerateThumbnailImage(FileName, FileUpload1.FileContent, SavePath_min, "", 100, 63);
             this.FileUpload1.SaveAs(SavePath);
         }
 
         DBinit();
+    }
+
+    protected void btn_back_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("../Yachts/Yachts_edit.aspx?type=yachts&id=" + id.Value);
     }
     #endregion
 
@@ -105,6 +110,8 @@ public partial class Admin_Album_Album_edit : System.Web.UI.Page
             string FilePath = Server.MapPath("/") + @"/sqlimages/Album/";
             string File = e.CommandArgument.ToString();
             DeleteFile(File, FilePath);
+            FilePath = Server.MapPath("/") + @"/sqlimages/min_Album/";
+            DeleteFile(File, FilePath);//縮圖
             DBinit();//上傳圖片
         }
     }
@@ -128,8 +135,5 @@ public partial class Admin_Album_Album_edit : System.Web.UI.Page
     }
     #endregion
 
-    protected void btn_back_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("../Yachts/Yachts_edit.aspx?type=yachts&id=" + id.Value);
-    }
+
 }

@@ -24,9 +24,14 @@
                     filebrowserImageUploadUrl: '../../plugins/ckeditor/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Images'
                 });
         });
+
         function album() {
             $("#ContentPlaceHolder1_btn_album").click();
         }
+        function file() {
+            $("#ContentPlaceHolder1_btn_file").click();
+        }
+
         function previewFileimg() {
             var ext = getFileExtension3($("#ContentPlaceHolder1_FileUploadimg")[0].files[0].name);
             if (ext != "jpg" && ext != "png" && ext != "jpeg" && ext != "gif") {
@@ -67,6 +72,7 @@
                         <a class="btn btn-info" href="Yachts.aspx?type=yachts"><i class="ti-arrow-left"></i>&nbsp;<span>回列表</span>&nbsp;</a>
                         <a class="btn btn-info" onclick="save()"><i class="ti-save"></i>&nbsp;<span>儲存</span>&nbsp;</a>
                         <a class="btn btn-info" onclick="album()"><i class="ti-image"></i>&nbsp;<span>電子相簿</span>&nbsp;</a>
+                        <a class="btn btn-info" onclick="file()"><i class="ti-files"></i>&nbsp;<span>文件</span>&nbsp;</a>
                         <a id="del_btn" class="btn btn-danger" onclick="data_del('')" runat="server"><i class="fa fa-times"></i>&nbsp;<span>刪除</span>&nbsp;</a>
                     </div>
                 </div>
@@ -78,6 +84,7 @@
                         <asp:Button ID="save" runat="server" Text="Button" OnClick="save_Check" Style="display: none" />
                         <asp:Button ID="del" runat="server" Text="刪除" OnClick="del_Click" Style="display: none" />
                         <asp:Button ID="btn_album" runat="server" Text="電子相簿" OnClick="btn_album_Click" Style="display: none" />
+                        <asp:Button ID="btn_file" runat="server" Text="文件" OnClick="btn_file_Click" Style="display: none" />
                     </div>
                     <div>
                         <h2 class="header-title">遊艇主檔-編輯</h2>
@@ -166,7 +173,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-12 m-t-5">
+             <%--   <div class="col-lg-12 m-t-5">
                     <div class="col-lg-12 form-horizontal">
                         <div class="form-group">
                             <label class="col-sm-1 control-label">檔案上傳:</label>
@@ -187,7 +194,7 @@
                         <asp:HiddenField ID="file_temp" runat="server" />
                     </div>
 
-                </div>
+                </div>--%>
 
 
                 <div class="clear"></div>

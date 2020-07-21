@@ -7,12 +7,14 @@ using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
+using System.Xml;
 
 public class DB_data
 {
@@ -27,7 +29,7 @@ public class DB_data
         SqlTransaction tran = Conn.BeginTransaction();
         try
         {
-         
+
             string DelCmdString = @"";
             DelCmdString = @"delete from GroupDetail where G_no=@G_no ";
             SqlCommand Delcmd = new SqlCommand(DelCmdString, Conn, tran);
@@ -49,7 +51,7 @@ public class DB_data
         return str_json;
     }
     //權限群組 checkbox儲存--auth_edit.aspx--btn_save
-    public static string AuthBtnsave(string G_no ,string Group_view)
+    public static string AuthBtnsave(string G_no, string Group_view)
     {
         string str_json = "";
 
@@ -95,7 +97,7 @@ public class DB_data
         DataTable dt = new DataTable();
         try
         {
-            
+
             string SelCmdString = @"";
             SelCmdString = @"select Group_view from GroupDetail where G_no=@G_no ";
             SqlCommand Selcmd = new SqlCommand(SelCmdString, Conn);
@@ -103,7 +105,7 @@ public class DB_data
             Selcmd.ExecuteNonQuery();
             SqlDataReader dr = Selcmd.ExecuteReader(CommandBehavior.CloseConnection);
             dt.Load(dr);
-            str_json = JsonConvert.SerializeObject(dt, Formatting.Indented);
+            str_json = JsonConvert.SerializeObject(dt, Newtonsoft.Json.Formatting.Indented);
             str_json = "{\"Type\": \"成功\",\"detail\":" + str_json + "}";
         }
         catch (Exception ex)
@@ -141,7 +143,7 @@ public class DB_data
             Selcmd.ExecuteNonQuery();
             SqlDataReader dr = Selcmd.ExecuteReader(CommandBehavior.CloseConnection);
             dt.Load(dr);
-            str_json = JsonConvert.SerializeObject(dt, Formatting.Indented);
+            str_json = JsonConvert.SerializeObject(dt, Newtonsoft.Json.Formatting.Indented);
             str_json = "{\"Type\": \"成功\",\"detail\":" + str_json + "}";
         }
         catch (Exception ex)
@@ -163,21 +165,49 @@ public class DB_data
         string result = "";
         try
         {
+            //xml拿標題跟內容範本
+            XmlDocument doc = new XmlDocument();
+            doc.Load(System.Web.HttpContext.Current.Server.MapPath("~/sqlimages/Mail/email.xml"));
+            string xpathChiefComplaint = "/root/首頁-聯繫我們-title";
+            XmlNode xnChiefComplaint = doc.SelectSingleNode(xpathChiefComplaint);
+            string title = xnChiefComplaint.InnerText;
+
+            doc.Load(System.Web.HttpContext.Current.Server.MapPath("~/sqlimages/Mail/email.xml"));
+            xpathChiefComplaint = "/root/首頁-聯繫我們";
+            xnChiefComplaint = doc.SelectSingleNode(xpathChiefComplaint);
+            string Content = xnChiefComplaint.InnerText;
+            Content = Content.Replace("@Name@", name).Replace("@Email@", email).Replace("@Phone@", phone)
+                 .Replace("@Region@", dl_Region).Replace("@Yachts@", dl_Yachts).Replace("@Comments@", comments);
             //寄信
             using (var mySmtp = new System.Net.Mail.SmtpClient("smtp.gmail.com", 587))
             {
                 mySmtp.Credentials = new System.Net.NetworkCredential("ga203306@gmail.com", "38xxx5438");
                 mySmtp.EnableSsl = true;
-                mySmtp.Send("ga203306@gmail.com",
-                "ga203306@yahoo.com.tw",
-                "線上填寫表單:",
-                "Name " + name + "\n" +
-                "Email " + email + "\n" +
-                "Phone " + phone + "\n" +
-                "Region " + dl_Region + "\n" +
-                "Yachts " + dl_Yachts + "\n" +
-                "Comments " + comments + "\n"
-               );
+                MailMessage msg = new MailMessage();
+                //收件者，以逗號分隔不同收件者 ex "test@gmail.com,test2@gmail.com"
+                //msg.To.Add(string.Join(",", MailList.ToArray()));
+                msg.To.Add("ga203306@yahoo.com.tw");
+                msg.From = new MailAddress("ga203306@gmail.com", title, System.Text.Encoding.UTF8);
+                //郵件標題 
+                msg.Subject = title;
+                //郵件標題編碼  
+                msg.SubjectEncoding = System.Text.Encoding.UTF8;
+                //郵件內容
+                msg.Body = Content;
+                msg.IsBodyHtml = true;
+                msg.BodyEncoding = System.Text.Encoding.UTF8;//郵件內容編碼 
+                msg.Priority = MailPriority.Normal;//郵件優先級 
+                mySmtp.Send(msg);
+                //mySmtp.Send("ga203306@gmail.com",
+                //"ga203306@yahoo.com.tw",
+                //title, Content
+                //"Name " + name + "\n" +
+                //"Email " + email + "\n" +
+                //"Phone " + phone + "\n" +
+                //"Region " + dl_Region + "\n" +
+                //"Yachts " + dl_Yachts + "\n" +
+                //"Comments " + comments + "\n"
+                //);
             }
             result = "成功";
         }
@@ -189,7 +219,7 @@ public class DB_data
         finally
         {
         }
-       
+
         return result;
     }
 

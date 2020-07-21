@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage/masterpage2.master" AutoEventWireup="true" CodeFile="Contact.aspx.cs" Inherits="Contact" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script>
         $(function () {
             submit();
@@ -8,12 +9,17 @@
         function submit() {
             $("#form1").submit(function (e) {
                 e.preventDefault();
+                if ($("#g-recaptcha-response").val() == "") {
+                    swal("請勾認證");
+                    return;
+                }
+
                 var name = $("#ContentPlaceHolder1_name").val();
                 var email = $("#ContentPlaceHolder1_email").val();
                 var phone = $("#ContentPlaceHolder1_phone").val();
                 var dl_Region = $("#ContentPlaceHolder1_dl_Region option:selected").text();
                 var dl_Yachts = $("#ContentPlaceHolder1_dl_Yachts option:selected").text();
-                var comments = $("#ContentPlaceHolder1_comments").val();
+                var comments = $("#ContentPlaceHolder1_comments").val().replace(/\n/g, "<br/>");
                 var postData = { name: name, email: email, phone: phone, dl_Region: dl_Region, dl_Yachts: dl_Yachts, comments: comments };
                 $.ajax({
                     type: "POST",
@@ -26,14 +32,20 @@
                         loading(false);
                     },
                     success: function (data) {
-                        if (data == "成功")
+                        if (data == "成功") {
                             swal("已寄出！", "", "success")
+                            $("#form1").find(":text,textarea").each(function () {
+                                $(this).val("");
+                            });
+                            grecaptcha.reset();
+                        }
+                        //swal("已寄出！", "", "success")
                         else
                             swal("失敗！", "", "error")
                     }
                 });
             });
-           
+
         }
     </script>
 </asp:Content>
@@ -119,11 +131,18 @@
                                 <textarea name="textarea" id="comments" cols="45" rows="5" runat="server"></textarea></td>
                         </tr>
                         <tr>
+                            <td class="from01td01"></td>
+                            <td>
+                                <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                            </td>
+                        </tr>
+
+                        <tr>
                             <td class="from01td01">&nbsp;</td>
                             <td class="f_right"><%--<a onclick="btn_Sendmail()"><img src="images/buttom03.gif" alt="submit" width="59" height="25" /></a>--%>
-                               <input type="image" alt="Submit"  src="images/buttom03.gif" style="border-width:0px;" />
+                                <input type="image" alt="Submit" src="images/buttom03.gif" style="border-width: 0px;" />
                                 <%--<img src="images/buttom03.gif" alt="submit" width="59" height="25" /></a>--%>
-                            <%--    <asp:ImageButton ID="btn_submit" runat="server" ImageUrl="images/buttom03.gif" Style="width: 59px; height: 25px;" OnClick="btn_submit_Click" />--%>
+                                <%-- <asp:ImageButton ID="btn_submit" runat="server" ImageUrl="images/buttom03.gif" Style="width: 59px; height: 25px;" OnClick="btn_submit_Click" />--%>
                             
                             </td>
                         </tr>

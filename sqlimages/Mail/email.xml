@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <首頁-聯繫我們-title><![CDATA[聯繫我們-線上填寫表單:]]></首頁-聯繫我們-title>
+  <首頁-聯繫我們>
+    <![CDATA[
+   <h2>以下為您聯繫我們的內容:</h2>
+ 
+   <h2>Name: @Name@</h2>
+   <h2>Email: @Email@</h2
+   <h2>Phone: @Phone@</h2>
+   <h2>Region: @Region@</h2>
+   <h2>Yachts: @Yachts@</h2>
+   <h2>Comments: @Comments@</h2>
+ 
+   <h2>請注意︰此郵件是系統自動傳送，請勿直接回覆此郵件</h2>]]>
+  </首頁-聯繫我們>
+
+</root>

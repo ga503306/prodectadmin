@@ -52,7 +52,7 @@
                 <div class="col-lg-5 m-t-5 p-l-0 p-r-0">
                     <div class="col-lg-12">
                         <a class="btn btn-info" href="Album.aspx?type=yachts"><i class="ti-arrow-left"></i>&nbsp;<span>回列表</span>&nbsp;</a>
-                        <a class="btn btn-info" onclick="back()"><i class="ti-image"></i>&nbsp;<span>回主檔</span>&nbsp;</a>
+                        <a class="btn btn-info" onclick="back()"><i class="ti-back-right"></i>&nbsp;<span>回主檔</span>&nbsp;</a>
                         <asp:Button ID="btn_back" runat="server" Text="Button" OnClick="btn_back_Click" Style="display: none" />
                     </div>
                 </div>

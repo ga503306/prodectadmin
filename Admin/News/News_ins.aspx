@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage/MasterPage.master" validateRequest="False" AutoEventWireup="true" CodeFile="News_ins.aspx.cs" Inherits="Admin_News_News_ins" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage/MasterPage.master" ValidateRequest="False" AutoEventWireup="true" CodeFile="News_ins.aspx.cs" Inherits="Admin_News_News_ins" %>
+
 <%@ Register Assembly="CKFinder" Namespace="CKFinder" TagPrefix="CKFinder" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
@@ -35,20 +36,20 @@
                 swal('您的圖片格式不正確!');
                 return;
             }
-              var preview = document.querySelector('#<%=img.ClientID %>');
-              var file = document.querySelector('#<%=FileUploadimg.ClientID %>').files[0];
-              var reader = new FileReader();
+            var preview = document.querySelector('#<%=img.ClientID %>');
+            var file = document.querySelector('#<%=FileUploadimg.ClientID %>').files[0];
+            var reader = new FileReader();
 
-              reader.onloadend = function () {
-                  preview.src = reader.result;
-              }
+            reader.onloadend = function () {
+                preview.src = reader.result;
+            }
 
-              if (file) {
-                  reader.readAsDataURL(file);
-              }
-              else {
-                  preview.src = "";
-              }
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+            else {
+                preview.src = "";
+            }
         }
         function getFileExtension3(filename) { //副檔名
             return filename.slice((filename.lastIndexOf(".") - 1 >>> 0) + 2);
@@ -95,22 +96,16 @@
                     </div>
                     <div class="col-lg-3 form-horizontal">
                         <div class="form-group">
-                            <label class="col-sm-4 control-label">標題:</label>
+                            <label class="col-sm-4 control-label">是否置頂:</label>
                             <div class="col-sm-8">
-                                <input class="form-control" id="Title_" type="text" runat="server" maxlength="50" />
+                                <asp:DropDownList class="form-control" ID="Priority" runat="server">
+                                    <asp:ListItem Value="0" Text="否"></asp:ListItem>
+                                    <asp:ListItem Value="1" Text="是"></asp:ListItem>
+                                </asp:DropDownList>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 form-horizontal">
-                        <div class="form-group">
-                            <label class="col-sm-4 control-label">簡介:</label>
-                            <div class="col-sm-8">
-                                <input class="form-control" id="Info" type="text" runat="server" maxlength="100" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12 m-t-5">
+
                     <div class="col-lg-3 form-horizontal">
                         <div class="form-group">
                             <label class="col-sm-4 control-label">顯示日期:</label>
@@ -119,24 +114,35 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-lg-12 m-t-5">
+                    <div class="col-lg-12 form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">標題:</label>
+                            <div class="col-sm-11">
+                                <input class="form-control" id="Title_" type="text" runat="server" maxlength="50" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 m-t-5">
+                    <div class="col-lg-12 form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">簡介:</label>
+                            <div class="col-sm-11">
+                                <input class="form-control" id="Info" type="text" runat="server" maxlength="100" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 m-t-5">
                     <div class="col-lg-3 form-horizontal">
                         <div class="form-group">
                             <label class="col-sm-4 control-label">上傳圖片:</label>
                             <div class="col-sm-8">
                                 <asp:FileUpload ID="FileUploadimg" runat="server" onchange="previewFileimg()" Style="margin-bottom: 10px; margin-top: 6px;" />
                                 <asp:ImageButton ID="img" runat="server" ImageUrl="~/images/預設圖片.png" CssClass="img" />
-                                <asp:HiddenField ID="img_temp" runat="server"/>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="col-lg-3 form-horizontal">
-                        <div class="form-group">
-                            <label class="col-sm-4 control-label">是否置頂:</label>
-                            <div class="col-sm-8">
-                                <asp:DropDownList class="form-control" ID="Priority" runat="server">
-                                <asp:ListItem Value="0" Text="否"></asp:ListItem>
-                                <asp:ListItem Value="1" Text="是"></asp:ListItem>
-                            </asp:DropDownList>
+                                <asp:HiddenField ID="img_temp" runat="server" />
                             </div>
                         </div>
                     </div>

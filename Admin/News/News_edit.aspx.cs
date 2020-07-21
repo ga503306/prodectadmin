@@ -54,7 +54,7 @@ public partial class Admin_News_News_edit : System.Web.UI.Page
             Inday_.Value = Convert.ToDateTime(dt.Rows[0]["Inday"]).ToString("yyyy-MM-dd");
             Priority.SelectedValue = dt.Rows[0]["Priority"].ToString();
             //圖
-            if (!string.IsNullOrEmpty(dt.Rows[0]["Img"].ToString())) 
+            if (!string.IsNullOrEmpty(dt.Rows[0]["Img"].ToString()))
             {
                 Random rand = new Random();
                 img.ImageUrl = "~/sqlimages/News/" + dt.Rows[0]["Newsno"].ToString() + "/" + dt.Rows[0]["Img"].ToString() + "?" + rand.Next(1000).ToString();
@@ -81,7 +81,7 @@ public partial class Admin_News_News_edit : System.Web.UI.Page
         }
         else
         {
-              save_Click();
+            save_Click();
         }
     }
 
@@ -98,7 +98,7 @@ public partial class Admin_News_News_edit : System.Web.UI.Page
 
             string CmdString = @"";
 
-                CmdString = @"update News set 
+            CmdString = @"update News set 
                               Title=@Title,Info=@Info,Context=@Context,Inday=@Inday,Img=@Img,Priority=@Priority
                               where Newsno=@id";
 
@@ -138,7 +138,7 @@ public partial class Admin_News_News_edit : System.Web.UI.Page
             Conn.Open();
             cmd.ExecuteNonQuery();
             del_img(id.Value);
-            
+
 
         }
         catch (Exception ex)
@@ -169,9 +169,9 @@ public partial class Admin_News_News_edit : System.Web.UI.Page
             String SavePath_min = "";
             img_temp.Value = filename;//存回資料庫
             SavePath = Server.MapPath("~/sqlimages/News/" + Newsno + "/" + filename);
-            SavePath_min = Server.MapPath("~/sqlimages/News/" + Newsno );
+            SavePath_min = Server.MapPath("~/sqlimages/News/" + Newsno);
             img.ImageUrl = "~/sqimages/News/" + Newsno + "/" + filename;
-            DB_fountion.GenerateThumbnailImage(filename, FileUploadimg.FileContent, SavePath_min, "min_", 800, 600);
+            DB_fountion.GenerateThumbnailImage(filename, FileUploadimg.FileContent, SavePath_min, "min_", 187, 121);
             FileUploadimg.SaveAs(SavePath);
         }
     }
@@ -180,10 +180,11 @@ public partial class Admin_News_News_edit : System.Web.UI.Page
     {
         if (!string.IsNullOrEmpty(img_temp.Value))
         {
-            try { 
-            //刪除
-            String DelPath = Server.MapPath("~/sqlimages/News/" + Newsno );
-            Directory.Delete(DelPath,true);
+            try
+            {
+                //刪除
+                String DelPath = Server.MapPath("~/sqlimages/News/" + Newsno);
+                Directory.Delete(DelPath, true);
             }
             catch
             {
