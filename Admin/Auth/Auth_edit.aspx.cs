@@ -33,11 +33,11 @@ public partial class Admin_Auth_Auth_edit : System.Web.UI.Page
                     ViewState["Get_Init"] = Get_Init();//拿已勾選資料
                     Set_Init();
 
-                    del_btn.Visible = true;
+                    //del_btn.Visible = true;
                 }
                 else
                 {
-                    del_btn.Visible = false;
+                   // del_btn.Visible = false;
                 }
             }
         }
@@ -51,7 +51,7 @@ public partial class Admin_Auth_Auth_edit : System.Web.UI.Page
         try
         {
             string CmdString = @"";
-            CmdString = @"select * from [Table]  ";
+            CmdString = @"select * from [Table] order by seq  ";
 
             SqlCommand cmd = new SqlCommand(CmdString, Conn);
 

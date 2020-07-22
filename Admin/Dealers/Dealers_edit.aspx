@@ -32,7 +32,7 @@
                 <div class="col-lg-12 m-t-5">
                     <div>
                         <asp:Button ID="save" runat="server" Text="Button" OnClick="save_Check" Style="display: none" />
-                        <%-- <asp:Button ID="del" runat="server" Text="刪除" OnClick="del_Click" Style="display: none" />--%>
+                         <asp:Button ID="del" runat="server" Text="刪除" OnClick="del_Click" Style="display: none" />
                     </div>
                     <div>
                         <h2 class="header-title">國家別,地區管理-編輯</h2>

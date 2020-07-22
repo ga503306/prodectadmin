@@ -317,6 +317,34 @@ public partial class Admin_Dealers_Dealers_edit : System.Web.UI.Page
         //DB_fountion.clearvalue(Page, "cpno_deail,cdno_detail,cdname_detail,description_detail");
         ScriptManager.RegisterStartupScript(Page, Page.GetType(), "closepup", "$('#modal-normal').modal('hide');", true);
     }
+
+    protected void del_Click(object sender, EventArgs e)
+    {
+        SqlConnection Conn = new SqlConnection();
+        Conn.ConnectionString = ConfigurationManager.ConnectionStrings["sqlString"].ConnectionString;
+        DataTable dt = new DataTable();
+        try
+        {
+            string CmdString = @"";
+            CmdString = @"DELETE FROM DealersR where R_no=@R_no";
+            SqlCommand cmd = new SqlCommand(CmdString, Conn);
+            cmd.Parameters.AddWithValue("R_no", id.Value);
+            Conn.Open();
+            cmd.ExecuteNonQuery();
+            Conn.Close();
+            Response.Redirect("Dealers.aspx?type=dealers");
+        }
+        catch (Exception ex)
+        {
+            DB_string.log("Dealers_edit_del:", ex.ToString());
+            ScriptManager.RegisterStartupScript(Page, GetType(), "alert", "<script>swal('刪除失敗','地區尚未全刪除')</script>", false);
+        }
+        finally
+        {
+
+        }
+       
+    }
     #endregion
 
     #region GridView

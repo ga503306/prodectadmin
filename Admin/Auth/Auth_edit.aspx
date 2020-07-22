@@ -5,7 +5,7 @@
     <script>
         $(function () {
 
-           
+
         });
 
         //初始化
@@ -68,6 +68,22 @@
                 }
             });
         }
+
+        function btn_click(btn) { //1全選 
+            if (btn.checked == true) {
+                var allCheckbox = $('tr td input');
+                allCheckbox.each(function () {
+                    this.checked = true;
+                });
+            }
+            else {
+                var allCheckbox = $('tr td input');
+                allCheckbox.each(function () {
+                    this.checked = false;
+                });
+            }
+
+        }
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -82,7 +98,7 @@
                     <div class="col-lg-12">
                         <a class="btn btn-info" href="Auth.aspx?type=auth"><i class="ti-arrow-left"></i>&nbsp;<span>回列表</span>&nbsp;</a>
                         <a class="btn btn-info" onclick="save()"><i class="ti-save"></i>&nbsp;<span>儲存</span>&nbsp;</a>
-                        <a id="del_btn" class="btn btn-danger" onclick="data_del('')" runat="server"><i class="fa fa-times"></i>&nbsp;<span>刪除</span>&nbsp;</a>
+                        <%-- <a id="del_btn" class="btn btn-danger" onclick="check_all" runat="server"><i class="fa fa-times"></i>&nbsp;<span>全選</span>&nbsp;</a>--%>
                     </div>
                 </div>
 
@@ -102,24 +118,23 @@
                 <div class="clear"></div>
 
                 <div class="col-lg-12">
-                    <asp:GridView ID="Grid_Auth" runat="server" class="table table-bordered" Width="100%" AutoGenerateColumns="False" EmptyDataText="尚無資料" ShowHeaderWhenEmpty="True" OnPreRender="Grid_Auth_PreRender" OnRowDataBound="Grid_Auth_RowDataBound" >
+                    <asp:GridView ID="Grid_Auth" runat="server" class="table table-bordered" Width="100%" AutoGenerateColumns="False" EmptyDataText="尚無資料" ShowHeaderWhenEmpty="True" OnPreRender="Grid_Auth_PreRender" OnRowDataBound="Grid_Auth_RowDataBound">
                         <Columns>
                             <asp:TemplateField ShowHeader="True">
+                                <HeaderTemplate>
+                                    <asp:CheckBox ID="CheckAllItem" runat="server" onclick="btn_click(this);"/>
+                                </HeaderTemplate>
                                 <ItemTemplate>
                                     <div class="custom-control custom-checkbox">
-                                        <asp:CheckBox ID="Choose"  name="Grid_checkbox" runat="server" />
+                                        <asp:CheckBox ID="Choose" name="Grid_checkbox" runat="server" />
                                         <%--<input type="checkbox" class="custom-control-input" id="<%#Eval("value")%>" name="Grid_checkbox" /><label class="custom-control-label" for="<%#Eval("value")%>"></label>--%>
                                     </div>
                                 </ItemTemplate>
                                 <ControlStyle Width="15px" />
                                 <HeaderStyle Width="15px" />
                             </asp:TemplateField>
-                             <asp:BoundField DataField="T_id" HeaderText="隱藏頁面英" >
-                             
-                            </asp:BoundField>
-                            <asp:BoundField DataField="T_name" HeaderText="隱藏頁面" >
-                             
-                            </asp:BoundField>
+                            <asp:BoundField DataField="T_id" HeaderText="隱藏頁面英"></asp:BoundField>
+                            <asp:BoundField DataField="T_name" HeaderText="隱藏頁面"></asp:BoundField>
                         </Columns>
                         <EmptyDataRowStyle HorizontalAlign="Center" />
                         <PagerStyle CssClass="fvPagerStyle" BackColor="White" HorizontalAlign="Center" />

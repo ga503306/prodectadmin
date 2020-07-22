@@ -5,8 +5,8 @@
         .img img{
             max-height: 525px;
             max-width: 700px;
-            width: 100%;
-            height: 100%;
+            width: 100% !important;
+            height: 100% !important;
             margin: 0px;
         }
     </style>
@@ -18,9 +18,10 @@
     <div class="right">
         <div class="right1">
             <div class="title"><span>News & Events</span></div>
-
+            <div class="box3">
             <!--------------------------------內容開始---------------------------------------------------->
             <div class="img" >
+                <h4 id="Title_" runat="server" style="font-weight: bold !important;"></h4>
                 <asp:Repeater ID="Rpt_News" runat="server">
                     <ItemTemplate>
                        <%# Eval("Context") %>
@@ -28,7 +29,7 @@
                 </asp:Repeater>
             </div>
 
-
+            </div>
             <div class="buttom001">
                 <a href="javascript:window.history.back();">
                     <img src="images/back.gif" alt="&quot;&quot;" width="55" height="28" /></a>

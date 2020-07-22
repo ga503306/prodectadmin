@@ -134,7 +134,7 @@ public partial class Admin_DealersDetail_DealersDetail : System.Web.UI.Page
         try
         {
             //刪除
-            String DelPath = Server.MapPath("~/sqlimages/DealerD/" + D_no);
+            String DelPath = Server.MapPath("~/sqlimages/dealers/" + D_no);
             Directory.Delete(DelPath, true);
         }
         catch

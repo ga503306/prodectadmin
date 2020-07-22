@@ -21,7 +21,7 @@
                     <div class="col-lg-12">
                         <a class="btn btn-info" href="Dealers.aspx?type=dealers"><i class="ti-arrow-left"></i>&nbsp;<span>回列表</span>&nbsp;</a>
                         <a class="btn btn-info" onclick="save()"><i class="ti-save"></i>&nbsp;<span>儲存</span>&nbsp;</a>
-                        <a id="del_btn" class="btn btn-danger" onclick="data_del('')" runat="server"><i class="fa fa-times"></i>&nbsp;<span>刪除</span>&nbsp;</a>
+                    <%--    <a id="del_btn" class="btn btn-danger" onclick="data_del('')" runat="server"><i class="fa fa-times"></i>&nbsp;<span>刪除</span>&nbsp;</a>--%>
                     </div>
                 </div>
 

@@ -89,7 +89,7 @@ public partial class Admin_Dealers_Dealers : System.Web.UI.Page
         catch (Exception ex)
         {
             DB_string.log("Dealers_del:", ex.ToString());
-            ScriptManager.RegisterStartupScript(Page, GetType(), "alert", "<script>swal('刪除失敗','國家尚未全刪除')</script>", false);
+            ScriptManager.RegisterStartupScript(Page, GetType(), "alert", "<script>swal('刪除失敗','地區尚未全刪除')</script>", false);
         }
         finally
         {

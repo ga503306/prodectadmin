@@ -1,0 +1,220 @@
+2020/7/22 上午 10:22:43        Dealers_del:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): DELETE 陳述式與 REFERENCE 條件約束 "FK_dealersC_dealersR" 衝突。衝突發生在資料庫 "project"，資料表 "dbo.DealersC", column 'R_no'。
+陳述式已經結束。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers.Del_Click(String R_no) 於 d:\火箭\後台\Admin\Dealers\Dealers.aspx.cs: 行 82
+ClientConnectionId:51814060-527c-4840-847a-92790b1af81f
+Error Number:547,State:0,Class:16
+2020/7/22 上午 10:22:49        Dealers_edit:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): DELETE 陳述式與 REFERENCE 條件約束 "FK_dealersD_dealersC" 衝突。衝突發生在資料庫 "project"，資料表 "dbo.DealersD"。
+陳述式已經結束。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_edit.del_row(String id_) 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 112
+ClientConnectionId:51814060-527c-4840-847a-92790b1af81f
+Error Number:547,State:0,Class:16
+2020/7/22 上午 10:22:53        Dealers_edit:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): DELETE 陳述式與 REFERENCE 條件約束 "FK_dealersD_dealersC" 衝突。衝突發生在資料庫 "project"，資料表 "dbo.DealersD"。
+陳述式已經結束。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_edit.del_row(String id_) 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 112
+ClientConnectionId:51814060-527c-4840-847a-92790b1af81f
+Error Number:547,State:0,Class:16
+2020/7/22 上午 10:22:58        Dealers_del:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): DELETE 陳述式與 REFERENCE 條件約束 "FK_dealersC_dealersR" 衝突。衝突發生在資料庫 "project"，資料表 "dbo.DealersC", column 'R_no'。
+陳述式已經結束。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers.Del_Click(String R_no) 於 d:\火箭\後台\Admin\Dealers\Dealers.aspx.cs: 行 82
+ClientConnectionId:51814060-527c-4840-847a-92790b1af81f
+Error Number:547,State:0,Class:16
+2020/7/22 上午 10:23:05        Dealers_edit:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): DELETE 陳述式與 REFERENCE 條件約束 "FK_dealersD_dealersC" 衝突。衝突發生在資料庫 "project"，資料表 "dbo.DealersD"。
+陳述式已經結束。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_edit.del_row(String id_) 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 112
+ClientConnectionId:51814060-527c-4840-847a-92790b1af81f
+Error Number:547,State:0,Class:16
+2020/7/22 上午 10:25:28        Dealers_edit:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): DELETE 陳述式與 REFERENCE 條件約束 "FK_dealersD_dealersC" 衝突。衝突發生在資料庫 "project"，資料表 "dbo.DealersD"。
+陳述式已經結束。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_edit.del_row(String id_) 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 112
+ClientConnectionId:298c5788-9a21-45a5-9424-725cfb1e5b1b
+Error Number:547,State:0,Class:16
+2020/7/22 上午 10:28:40        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133
+2020/7/22 上午 10:33:51        Dealers_edit_del:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): DELETE 陳述式與 REFERENCE 條件約束 "FK_dealersC_dealersR" 衝突。衝突發生在資料庫 "project"，資料表 "dbo.DealersC", column 'R_no'。
+陳述式已經結束。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_edit.del_Click(Object sender, EventArgs e) 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 333
+ClientConnectionId:b51b8187-4465-48ea-b85d-25d978b9a69c
+Error Number:547,State:0,Class:16
+2020/7/22 上午 10:34:10        Dealers_edit_del:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): DELETE 陳述式與 REFERENCE 條件約束 "FK_dealersC_dealersR" 衝突。衝突發生在資料庫 "project"，資料表 "dbo.DealersC", column 'R_no'。
+陳述式已經結束。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_edit.del_Click(Object sender, EventArgs e) 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 333
+ClientConnectionId:b51b8187-4465-48ea-b85d-25d978b9a69c
+Error Number:547,State:0,Class:16
+2020/7/22 上午 10:34:38        Dealers_edit_del:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): DELETE 陳述式與 REFERENCE 條件約束 "FK_dealersC_dealersR" 衝突。衝突發生在資料庫 "project"，資料表 "dbo.DealersC", column 'R_no'。
+陳述式已經結束。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_edit.del_Click(Object sender, EventArgs e) 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 333
+ClientConnectionId:b51b8187-4465-48ea-b85d-25d978b9a69c
+Error Number:547,State:0,Class:16
+2020/7/22 上午 10:35:12        Dealers_edit_del:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): DELETE 陳述式與 REFERENCE 條件約束 "FK_dealersC_dealersR" 衝突。衝突發生在資料庫 "project"，資料表 "dbo.DealersC", column 'R_no'。
+陳述式已經結束。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_edit.del_Click(Object sender, EventArgs e) 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 333
+ClientConnectionId:b51b8187-4465-48ea-b85d-25d978b9a69c
+Error Number:547,State:0,Class:16
+2020/7/22 上午 10:35:37        Dealers_edit_del:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): DELETE 陳述式與 REFERENCE 條件約束 "FK_dealersC_dealersR" 衝突。衝突發生在資料庫 "project"，資料表 "dbo.DealersC", column 'R_no'。
+陳述式已經結束。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_edit.del_Click(Object sender, EventArgs e) 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 333
+ClientConnectionId:b51b8187-4465-48ea-b85d-25d978b9a69c
+Error Number:547,State:0,Class:16
+2020/7/22 上午 10:35:45        Dealers_edit_del:頁面:  錯誤訊息:System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 Admin_Dealers_Dealers_edit.del_Click(Object sender, EventArgs e) 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 335
+2020/7/22 上午 10:36:18        Dealers_edit_del:頁面:  錯誤訊息:System.Data.SqlClient.SqlException (0x80131904): DELETE 陳述式與 REFERENCE 條件約束 "FK_dealersC_dealersR" 衝突。衝突發生在資料庫 "project"，資料表 "dbo.DealersC", column 'R_no'。
+陳述式已經結束。
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 Admin_Dealers_Dealers_edit.del_Click(Object sender, EventArgs e) 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 333
+ClientConnectionId:c5d6455e-713a-44a6-8abc-b62ed30ac956
+Error Number:547,State:0,Class:16
+2020/7/22 上午 10:36:52        Dealers_edit_del:頁面:  錯誤訊息:System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.Threading.Thread.AbortInternal()
+   於 System.Threading.Thread.Abort(Object stateInfo)
+   於 System.Web.HttpResponse.AbortCurrentThread()
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 System.Web.HttpResponse.Redirect(String url)
+   於 Admin_Dealers_Dealers_edit.del_Click(Object sender, EventArgs e) 於 d:\火箭\後台\Admin\Dealers\Dealers_edit.aspx.cs: 行 335
+2020/7/22 上午 10:38:33        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133
+2020/7/22 上午 10:38:34        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133
+2020/7/22 上午 10:38:36        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133
+2020/7/22 上午 10:38:45        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133
+2020/7/22 上午 10:38:46        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133
+2020/7/22 上午 10:43:10        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133
+2020/7/22 上午 10:43:12        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133
+2020/7/22 上午 10:43:13        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133

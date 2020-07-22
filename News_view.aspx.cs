@@ -19,6 +19,7 @@ public partial class News_view : System.Web.UI.Page
             {
                 id.Value = Request.QueryString["id"];
                 DataTable dt = News_sel(id.Value);
+                Title_.InnerText = dt.Rows[0]["Title"].ToString();
                 Rpt_News.DataSource = dt;
                 Rpt_News.DataBind();
             }
@@ -34,7 +35,7 @@ public partial class News_view : System.Web.UI.Page
         try
         {
             string CmdString = @"";
-            CmdString = @"select Context from News where Newsno=@Newsno";
+            CmdString = @"select Title,Context from News where Newsno=@Newsno";
 
             SqlCommand cmd = new SqlCommand(CmdString, Conn);
             cmd.Parameters.AddWithValue("Newsno", id);
