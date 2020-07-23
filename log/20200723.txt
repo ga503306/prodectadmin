@@ -1,0 +1,24 @@
+2020/7/23 下午 04:09:51        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133
+2020/7/23 下午 04:09:52        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133
+2020/7/23 下午 04:09:53        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133
+2020/7/23 下午 04:09:54        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133
+2020/7/23 下午 04:10:07        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133
+2020/7/23 下午 04:10:09        Dealers_Detail:頁面:  錯誤訊息:System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 Dealers.Detail(String id) 於 d:\火箭\後台\Dealers.aspx.cs: 行 133

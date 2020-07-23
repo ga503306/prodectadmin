@@ -45,6 +45,7 @@ public partial class Admin_Account_Account : System.Web.UI.Page
 
             cmd.ExecuteNonQuery();
             tran.Commit();
+            ScriptManager.RegisterStartupScript(Page, GetType(), "alert_success", "<script>swal('修改成功')</script>", false);
         }
         catch (Exception ex)
         {

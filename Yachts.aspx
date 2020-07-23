@@ -23,7 +23,7 @@
             max-height: 63px;
             max-width: 103px;
             /*width: 100%;*/
-            height: 100%;
+            height: 63px;
             margin: 0px;
         }
 
