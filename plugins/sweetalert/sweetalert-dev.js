@@ -855,7 +855,7 @@
 
                 setTimeout(function () {
                     _removeClass$getTopMargin$fadeIn$show$addClass.addClass($modal, 'visible');
-                }, 500);
+                }, 0);
 
                 var timer = $modal.getAttribute('data-timer');
 
