@@ -8,16 +8,47 @@
             max-width: 150px;
             margin: 20px;
         }
+
+        .sety {
+            min-height: 250px;
+            overflow-y: auto;
+            max-height: 300px;
+        }
     </style>
     <script>
         function previewFileimg() {
-            var ext = getFileExtension3($("#ContentPlaceHolder1_FileUpload1")[0].files[0].name);
-            if (ext != "jpg" && ext != "png" && ext != "jpeg" && ext != "gif") {
-                $("#ContentPlaceHolder1_FileUpload1").val("");
-                swal('您的圖片格式不正確!');
-                return;
+            $("#preview").empty();
+            for (var i = 0; i < $("#ContentPlaceHolder1_FileUpload1")[0].files.length; i++) {
+                var ext = getFileExtension3($("#ContentPlaceHolder1_FileUpload1")[0].files[i].name);
+                if (ext != "jpg" && ext != "png" && ext != "jpeg" && ext != "gif") {
+                    $("#ContentPlaceHolder1_FileUpload1").val("");
+                    swal('您的圖片格式不正確!');
+                    return;
+                }
+                var file = $("#ContentPlaceHolder1_FileUpload1")[0].files[i];
+                var reader = new FileReader();
+                if (file) {
+                    reader.readAsDataURL(file);
+                    reader.onload = function (e) {
+                        var img = $('<div class="col-lg-2  col-md-6" style="height: 175px; "><img class="img" id="preview"/></div>')
+                        img.children('img').attr('src', e.target.result);
+                        img.appendTo('#preview');
+                        //var img = $('<img class="img" id="preview"/>')
+                        //img.attr('src', e.target.result);
+                        //img.appendTo('#preview');
+                    }
+
+                }
             }
-            var preview = document.querySelector('#<%=img.ClientID %>');
+
+
+            //var ext = getFileExtension3($("#ContentPlaceHolder1_FileUpload1")[0].files[0].name);
+            //if (ext != "jpg" && ext != "png" && ext != "jpeg" && ext != "gif") {
+            //    $("#ContentPlaceHolder1_FileUpload1").val("");
+            //    swal('您的圖片格式不正確!');
+            //    return;
+            //}
+           <%-- var preview = document.querySelector('#<%=img.ClientID %>');
             var file = document.querySelector('#<%=FileUpload1.ClientID %>').files[0];
             var reader = new FileReader();
 
@@ -30,7 +61,7 @@
             }
             else {
                 preview.src = "";
-            }
+            }--%>
         }
         function getFileExtension3(filename) { //副檔名
             return filename.slice((filename.lastIndexOf(".") - 1 >>> 0) + 2);
@@ -76,16 +107,24 @@
 
                             <div class="col-sm-11">
                                 <div class="col-sm-2">
-                                    <asp:FileUpload ID="FileUpload1" runat="server" onchange="previewFileimg()" />
+                                    <asp:FileUpload ID="FileUpload1" runat="server" AllowMultiple="true" onchange="previewFileimg()" />
                                 </div>
                                 <div class="col-sm-10">
-                                    <asp:Button ID="upimg" runat="server" Text="上傳" CssClass="btn btn-secondary" Style="" OnClick="upimg_Click" />
+                                    <%--<asp:Button ID="upimg" runat="server" Text="上傳" CssClass="btn btn-secondary" Style="" OnClick="upimg_Click" />--%>
+                                    <asp:Button ID="upimgmult" runat="server" Text="多筆上傳" CssClass="btn btn-secondary" Style="" OnClick="upimgmult_Click" />
                                 </div>
-                                <asp:ImageButton ID="img" runat="server" Enabled="false" ImageUrl="~/images/預設圖片.png" CssClass="img" />
+                                <%-- <asp:ImageButton ID="img" runat="server" Enabled="false" ImageUrl="~/images/預設圖片.png" CssClass="img" />--%>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="clear"></div>
+                <div id="preview" class="col-lg-12 sety">
+                    <div class="col-lg-3  col-md-6">
+                        <asp:ImageButton ID="img" runat="server" Enabled="false" ImageUrl="~/images/預設圖片.png" CssClass="img" />
+                    </div>
+                </div>
+
                 <div class="mt-3 ">
                     <asp:ScriptManager runat="server"></asp:ScriptManager>
                     <asp:UpdatePanel ID="test" class="" runat="server">
@@ -97,7 +136,7 @@
                                             <img src='<%# Eval("strFilename","../../sqlimages/Album/{0}") %>' style="width: 100%; height: 200px;" />
                                         </div>
                                         <div class="text-right mt-2">
-                                            <asp:Button ID="btn" runat="server" class="btn btn-danger" Text="刪除" CommandName="Del" CommandArgument='<%# Eval("strFilename") %>' />
+                                            <asp:Button ID="btn" runat="server" class="btn btn-danger" Text="刪除" CommandName="Del" OnClientClick="return Del_check(this);" CommandArgument='<%# Eval("strFilename") %>' />
                                         </div>
                                     </div>
                                 </ItemTemplate>

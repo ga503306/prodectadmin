@@ -8,10 +8,15 @@
         $(function () {
             var galleries = $('.ad-gallery').adGallery();
             galleries[0].settings.effect = 'slide-hori';
+            $('.topbuttom').click(function () {
+                $('html, body').scrollTop(0);
+
+            });
         });
         function get_url(url) {
             document.location.href = url + ".aspx?id=" + $("#ContentPlaceHolder1_id").val();
         }
+
     </script>
     <style>
         .img {
@@ -22,13 +27,13 @@
             margin: 0px;
         }
 
-            .img1 img {
-                max-height: 525px;
-                max-width: 700px;
-                width: 100% !important;
-                height: 100% !important;
-                margin: 0px;
-            }
+        .img1 img {
+            max-height: 525px;
+            max-width: 700px;
+            width: 100% !important;
+            height: 100% !important;
+            margin: 0px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -229,11 +234,11 @@
                     </table>
 
 
-                </div>
+                </div>  --%>
                 <p class="topbuttom">
                     <img src="images/top.gif" alt="top" />
                 </p>
-                --%>
+
                 <!--下載開始-->
                 <div class="downloads">
                     <p>

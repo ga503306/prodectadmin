@@ -43,6 +43,7 @@ public partial class Admin_File_File_edit : System.Web.UI.Page
         dt.Columns.Add("FilePath", typeof(String));
         dt.Columns.Add("FileMapPath", typeof(String));
         dt.Columns.Add("addr", typeof(String));
+        dt.Columns.Add("FileName_full", typeof(String));
 
         foreach (string FilePath in System.IO.Directory.GetFileSystemEntries(
                  Server.MapPath("~") + @"/sqlimages/File/" + id + "/"))
@@ -50,10 +51,11 @@ public partial class Admin_File_File_edit : System.Web.UI.Page
             string[] File = FilePath.Split('/');
             int indexid = File.GetUpperBound(0);
             string FileName = File[indexid];
+            string FileName_full = File[indexid];
             string addr = @"sqlimages\File\" + id + "\\";
             string FileMapPath = @"sqlimages\File\" + id + "\\" + FileName;
 
-            dt.Rows.Add(FileName, FilePath, FileMapPath, addr);
+            dt.Rows.Add(FileName, FilePath, FileMapPath, addr, FileName_full);
         }
         ViewState["ViewPath"] = dt;
         Rpt_File.DataSource = dt;
@@ -114,18 +116,19 @@ public partial class Admin_File_File_edit : System.Web.UI.Page
         if (e.CommandName == "del")
         {
             string FilePath = Server.MapPath(@"~/sqlimages/File/" + id.Value + "/");
-            string File = e.CommandArgument.ToString();
+            string DeleteFileName = e.CommandArgument.ToString();
 
             DataTable dt = new DataTable();
             dt = (DataTable)ViewState["ViewPath"];
-            for (int number = 0; number < dt.Rows.Count; number++)
-            {
-                if (dt.Rows[number]["FileName"].ToString() == File)
-                {
-                    string DeleteFileName = dt.Rows[number]["FileName"].ToString();
-                    DeleteFile(DeleteFileName, FilePath);
-                }
-            }
+            //for (int number = 0; number < dt.Rows.Count; number++)
+            //{
+            //    if (dt.Rows[number]["FileName_full"].ToString() == File)
+            //    {
+            //        string DeleteFileName = dt.Rows[number]["FileName_full"].ToString();
+            //        DeleteFile(DeleteFileName, FilePath);
+            //    }
+            //}
+            DeleteFile(DeleteFileName, FilePath);
             ViewFile(id.Value);
         }
     }

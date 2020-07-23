@@ -80,7 +80,7 @@
                         <div class="card">
                             <img src="../../images/icon/document.png" alt="Avatar" runat="server" style="width: 20%" id="show_icon" />
                             <asp:Label ID="FileName" runat="server"><a href='../../<%# Eval("FileMapPath")%>' target="_blank"><%# Eval("FileName")%></a></asp:Label>
-                            <asp:Button ID="del" runat="server" Text="刪除" CssClass="btn btn-danger btnn pull-right" CommandName="del" CommandArgument='<%# Eval("FileName") %>' />
+                            <asp:Button ID="del" runat="server" Text="刪除" CssClass="btn btn-danger btnn pull-right" CommandName="del"  OnClientClick="return Del_check(this);" CommandArgument='<%# Eval("Filename_full") %>' />
 
                         </div>
                     </div>

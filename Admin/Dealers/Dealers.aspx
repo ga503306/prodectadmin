@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage/MasterPage.master" AutoEventWireup="true" CodeFile="Dealers.aspx.cs" Inherits="Admin_Dealers_Dealers" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <title>國家別,地區管理</title>
     <script>
         $(function () {
@@ -13,8 +13,8 @@
         };
     </script>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-      <div class="page-title-box">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div class="page-title-box">
         <h4 id="head_title" class="page-title">國家別,地區管理</h4>
         <div class="clearfix"></div>
     </div>
@@ -36,15 +36,19 @@
                         <ControlStyle Width="18px" />
                         <HeaderStyle Width="18px"></HeaderStyle>
                     </asp:ButtonField>
-                    <asp:BoundField DataField="R_no" HeaderText="流水號" HeaderStyle-Width="90px" ItemStyle-cssclass="hiddencol" HeaderStyle-CssClass="hiddencol" >
+                    <asp:BoundField DataField="R_no" HeaderText="流水號" HeaderStyle-Width="90px" ItemStyle-CssClass="hiddencol" HeaderStyle-CssClass="hiddencol">
                         <HeaderStyle Width="90px" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="Region" HeaderText="國家" >
-                    </asp:BoundField>
-                    <asp:ButtonField ButtonType="Image" ImageUrl="~/images/icon/刪除紅.png" HeaderStyle-Width="18px" CommandName="Del">
+                    <asp:BoundField DataField="Region" HeaderText="國家"></asp:BoundField>
+                    <asp:TemplateField ShowHeader="False" HeaderStyle-Width="18px">
+                        <ItemTemplate>
+                            <asp:ImageButton ID="Button2" ImageUrl="~/images/icon/刪除紅.png" runat="server" CausesValidation="False" CommandName="Del" Text="刪除" OnClientClick="return Del_check(this);" Width="18px" CommandArgument='<%#Container.DataItemIndex%>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <%--<asp:ButtonField ButtonType="Image" ImageUrl="~/images/icon/刪除紅.png" HeaderStyle-Width="18px" CommandName="Del">
                         <ControlStyle Width="18px" />
                         <HeaderStyle Width="18px"></HeaderStyle>
-                    </asp:ButtonField>
+                    </asp:ButtonField>--%>
                 </Columns>
                 <EmptyDataRowStyle HorizontalAlign="Center" />
                 <PagerStyle CssClass="fvPagerStyle" BackColor="White" HorizontalAlign="Center" />

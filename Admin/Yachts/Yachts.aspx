@@ -44,13 +44,18 @@
                     <asp:BoundField DataField="Modal_n" HeaderText="遊艇型號" HeaderStyle-Width="90px">
                         <HeaderStyle Width="90px" />
                     </asp:BoundField>
-                     <asp:BoundField DataField="Isnew" HeaderText="是否最新" HeaderStyle-Width="90px">
+                    <asp:BoundField DataField="Isnew" HeaderText="是否最新" HeaderStyle-Width="90px">
                         <HeaderStyle Width="90px" />
                     </asp:BoundField>
-                    <asp:ButtonField ButtonType="Image" ImageUrl="~/images/icon/刪除紅.png" HeaderStyle-Width="18px" CommandName="Del">
+                    <asp:TemplateField ShowHeader="False" HeaderStyle-Width="18px">
+                        <ItemTemplate>
+                            <asp:ImageButton ID="Button2" ImageUrl="~/images/icon/刪除紅.png" runat="server" CausesValidation="False" CommandName="Del" Text="刪除" OnClientClick="return Del_check(this);" Width="18px" CommandArgument='<%#Container.DataItemIndex%>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <%--<asp:ButtonField ButtonType="Image" ImageUrl="~/images/icon/刪除紅.png" HeaderStyle-Width="18px" CommandName="Del">
                         <ControlStyle Width="18px" />
                         <HeaderStyle Width="18px"></HeaderStyle>
-                    </asp:ButtonField>
+                    </asp:ButtonField>--%>
                 </Columns>
                 <EmptyDataRowStyle HorizontalAlign="Center" />
                 <PagerStyle CssClass="fvPagerStyle" BackColor="White" HorizontalAlign="Center" />

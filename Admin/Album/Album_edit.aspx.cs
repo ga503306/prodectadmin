@@ -136,4 +136,34 @@ public partial class Admin_Album_Album_edit : System.Web.UI.Page
     #endregion
 
 
+
+    protected void upimgmult_Click(object sender, EventArgs e)
+    {
+
+        if (this.FileUpload1.HasFile)
+        {
+            if (!Directory.Exists(HttpContext.Current.Server.MapPath("/") + @"/sqlimages/Album/" + id.Value))
+            {
+                //新增資料夾
+                Directory.CreateDirectory(HttpContext.Current.Server.MapPath("/") + @"/sqlimages/Album/" + id.Value);
+            }
+            if (!Directory.Exists(HttpContext.Current.Server.MapPath("/") + @"/sqlimages/min_Album/" + id.Value))
+            {
+                //新增資料夾
+                Directory.CreateDirectory(HttpContext.Current.Server.MapPath("/") + @"/sqlimages/min_Album/" + id.Value);
+            }
+            foreach (HttpPostedFile file in FileUpload1.PostedFiles)
+            {
+                string ext = System.IO.Path.GetExtension(file.FileName);
+                String FileName = DateTime.Now.ToString("yyyyMMddHHmmss.fff") + ext;
+                String SavePath = Server.MapPath("/") + @"/sqlimages/Album/" + id.Value + "/" + FileName;
+                String SavePath_min = Server.MapPath("~/sqlimages/min_Album/" + id.Value);
+                DB_fountion.GenerateThumbnailImage(FileName, file.InputStream, SavePath_min, "", 100, 63);
+                file.SaveAs(SavePath);
+
+            }
+        }
+
+        DBinit();
+    }
 }

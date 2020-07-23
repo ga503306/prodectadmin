@@ -3,15 +3,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <title>最新消息</title>
     <style type="text/css">
-    .hiddencol
-    {
-        display:none;
-    }
-    .viscol
-    {
-        display:block;
-    }
-</style>
+        .hiddencol {
+            display: none;
+        }
+
+        .viscol {
+            display: block;
+        }
+    </style>
     <script>
         $(function () {
             if ($('#<%=Grid_News.ClientID%>')[0].rows.length > 2)
@@ -46,23 +45,26 @@
                         <ControlStyle Width="18px" />
                         <HeaderStyle Width="18px"></HeaderStyle>
                     </asp:ButtonField>
-                    <asp:BoundField DataField="Newsno" HeaderText="流水號" HeaderStyle-Width="90px" ItemStyle-cssclass="hiddencol" HeaderStyle-CssClass="hiddencol" >
+                    <asp:BoundField DataField="Newsno" HeaderText="流水號" HeaderStyle-Width="90px" ItemStyle-CssClass="hiddencol" HeaderStyle-CssClass="hiddencol">
                         <HeaderStyle Width="90px" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="Title" HeaderText="標題">
-                    </asp:BoundField>
-                    <asp:BoundField DataField="Info" HeaderText="簡介" >
-                    </asp:BoundField>
-                    <asp:BoundField DataField="Priority" HeaderText="是否置頂" HeaderStyle-Width="90px" >
+                    <asp:BoundField DataField="Title" HeaderText="標題"></asp:BoundField>
+                    <asp:BoundField DataField="Info" HeaderText="簡介"></asp:BoundField>
+                    <asp:BoundField DataField="Priority" HeaderText="是否置頂" HeaderStyle-Width="90px">
                         <HeaderStyle Width="90px" />
                     </asp:BoundField>
-                     <asp:BoundField DataField="Inday" HeaderText="日期" HeaderStyle-Width="90px" dataformatstring="{0:yyyy/MM/dd}" >
+                    <asp:BoundField DataField="Inday" HeaderText="日期" HeaderStyle-Width="90px" DataFormatString="{0:yyyy/MM/dd}">
                         <HeaderStyle Width="90px" />
                     </asp:BoundField>
-                    <asp:ButtonField ButtonType="Image" ImageUrl="~/images/icon/刪除紅.png" HeaderStyle-Width="18px" CommandName="Del">
+                    <asp:TemplateField ShowHeader="False" HeaderStyle-Width="18px">
+                        <ItemTemplate>
+                            <asp:ImageButton ID="Button2" ImageUrl="~/images/icon/刪除紅.png" runat="server" CausesValidation="False" CommandName="Del" Text="刪除" OnClientClick="return Del_check(this);" Width="18px" CommandArgument='<%#Container.DataItemIndex%>'/>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <%--<asp:ButtonField ButtonType="Image" ImageUrl="~/images/icon/刪除紅.png" HeaderStyle-Width="18px" CommandName="Del">
                         <ControlStyle Width="18px" />
                         <HeaderStyle Width="18px"></HeaderStyle>
-                    </asp:ButtonField>
+                    </asp:ButtonField>--%>
                 </Columns>
                 <EmptyDataRowStyle HorizontalAlign="Center" />
                 <PagerStyle CssClass="fvPagerStyle" BackColor="White" HorizontalAlign="Center" />
