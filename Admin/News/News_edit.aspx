@@ -63,6 +63,7 @@
                 <div class="col-lg-5 m-t-5 p-l-0 p-r-0">
                     <div class="col-lg-12">
                         <a class="btn btn-info" href="News.aspx?type=news"><i class="ti-arrow-left"></i>&nbsp;<span>回列表</span>&nbsp;</a>
+                        <a class="btn btn-info" href="News_ins.aspx?type=news"><i class="fa fa fa-plus"></i>&nbsp;<span>新增</span>&nbsp;</a>
                         <a class="btn btn-info" onclick="save()"><i class="ti-save"></i>&nbsp;<span>儲存</span>&nbsp;</a>
                         <a id="del_btn" class="btn btn-danger" onclick="data_del('')" runat="server"><i class="fa fa-times"></i>&nbsp;<span>刪除</span>&nbsp;</a>
                     </div>

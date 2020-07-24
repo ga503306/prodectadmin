@@ -48,6 +48,7 @@ public partial class Admin_News_News_ins : System.Web.UI.Page
         Conn.ConnectionString = ConfigurationManager.ConnectionStrings["sqlString"].ConnectionString;
         Conn.Open();
         DataTable dt = new DataTable();
+        DataTable serial = new DataTable();
         try
         {
           
@@ -55,7 +56,6 @@ public partial class Admin_News_News_ins : System.Web.UI.Page
             CmdString = @"insert into News (Newsno,Title,Info,Context,Inday,Img,Priority) 
                               values (@Newsno,@Title,@Info,@Context,@Inday,@Img,@Priority)";
 
-            DataTable serial = new DataTable();
             serial = DB_fountion.GetNo("Newsno", "News");
 
             Update_img(DateTime.Now.ToString("yyyyMMdd") + serial.Rows[0]["sno"].ToString());//新增圖片
@@ -79,7 +79,9 @@ public partial class Admin_News_News_ins : System.Web.UI.Page
         finally
         {
             Conn.Close();
-            Response.Redirect("News.aspx?type=news");
+            //Response.Redirect("News.aspx?type=news");
+            Response.Redirect("News_edit.aspx?type=news&id=" + DateTime.Now.ToString("yyyyMMdd") + serial.Rows[0]["sno"].ToString());
+            //ScriptManager.RegisterStartupScript(Page, GetType(), "success", @"<script> swal({title: '新增成功',text: '跳向編輯頁',},function() {document.location.href = 'News_edit.aspx?type=news&id="+ DateTime.Now.ToString("yyyyMMdd") + serial.Rows[0]["sno"].ToString()+"';});</script>", false);
         }
     }
 
