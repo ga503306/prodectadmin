@@ -47,7 +47,7 @@
                         <div class="form-group">
                             <label class="col-sm-4 control-label"><span style="color: #ff0000">*</span>密碼:</label>
                             <div class="col-sm-8">
-                                <input class="form-control" id="Password" type="text" runat="server" maxlength="20" />
+                                <input class="form-control" id="Password" type="password" runat="server" maxlength="20" />
                             </div>
                         </div>
                     </div>
