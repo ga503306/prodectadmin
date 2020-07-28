@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage/MasterPage.master" ValidateRequest="False" AutoEventWireup="true" CodeFile="News_edit.aspx.cs" Inherits="Admin_News_News_edit" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage/MasterPage.master" AutoEventWireup="true" CodeFile="News_edit.aspx.cs" Inherits="Admin_News_News_edit" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <title>最新消息-編輯</title>
@@ -152,7 +152,7 @@
                         <div class="form-group">
                             <label class="col-sm-1 control-label">內文:</label>
                             <div class="col-sm-11">
-                                <textarea class="" name="Context_" id="Context_" rows="7" maxlength="500" runat="server"></textarea>
+                                <textarea class="" name="Context_" id="Context_" rows="7" maxlength="500" runat="server" ValidateRequestMode ="Disabled"></textarea>
                             </div>
                         </div>
                     </div>
